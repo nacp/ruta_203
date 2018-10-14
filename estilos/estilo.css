@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Sans;
+  background: #CFCFEA;
+  padding-top: 3rem;
+}
+
+
+.cabecera {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #23232B;
+  color: #CFCFEA;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 0.5em;
+  padding-bottom: 2em;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  widows: 100%;
+}
+
+#ABC {display: none;}
+
+#ABC + label:before { content: 'ABC'; }
+
+#ABC:checked + label:before {
+  content: 'BAC';
+}
+
+.abc-btn {
+  margin: 0.3em;
+  padding: 0.3em;
+  border-radius: 0.5em;
+  color: #CFCFEA;
+  font-weight: bold;
+  background: #23232B;
+}
+
+nav > select {
+  margin: 0.3em;
+  border-radius: 0.5em;
+}
+
+input[type=button] {
+  margin: 0.3em;
+  border-radius: 0.5em;
+  padding: 0.3em;
+  font-weight: bold;
+}
+
+section { 
+  width: 100%;
+  margin: 0.3em;
+  color: #CFCFEA;
+  font-weight: bold;
+}
+
+section > h2 {
+  text-align: center;
+  color: #23232B;
+}
+
+/*section > div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+section > div > div {
+  padding: 0.6em;
+  margin: 0.3em;
+  background: #c33;
+  border-radius: 0.5em;
+  width: 80%;
+}
+*/
+.caja {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.caja > div {
+  padding: 0;
+  margin: 0;
+}
+
+.cliente, .cliente_abc { background: #4A4A59; }
+
+.cliente {
+  padding: 0.4em 0.4em 0 0.4em;
+  border-radius: 1.0em 1.0em 0 0;
+}
+
+.cliente_abc {
+  border-radius: 1em;
+  padding: 0.4em;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+.datos {
+  background: #616182;
+  padding: 0.2em 0.2em 0.2em 0.2em;
+  border-radius: 0 0 1em 1em;
+  height: 35%;
+  font-size: 0.8em;
+}
+
+.ubicacion {
+  background: #CFCFEA;
+  text-align: center;
+  margin: 0.1em;
+  border-radius: 0.5em;
+  border-color: #616182;
+  border-style: solid;
+  padding: 0.3em;
+}
+
+img {
+  width: 75%;
+}
+
+.Inco {
+  text-align: center;
+  font-weight: bold;
+  background: #616182;
+  margin: 0.1em;
+  border-radius: 0.5em;
+}
+
+.menu-btn, .iva-btn {
+  position: fixed;
+  top: 0.4em;
+  background: none;
+  width: 1.5em;
+  height: 1.5em;
+  border: solid 1px white;
+  border-radius: 100%;
+  margin-left: 0.3em;
+  transition: all 0.5s;
+}
+
+.iva-btn { 
+  right: 0.3em;
+}
+
+#btn-menu, #btn-iva {display: none;}
+
+#btn-menu:checked ~ #opciones { left: 0; }
+
+#btn-iva:checked ~ #iva { right: 0; }
+
+#opciones {
+  position: fixed;
+  top: 2.4rem;
+  left: -100%;
+  background: #CFCFEA;
+  font-size: 0.8rem;
+  width: 70%;
+  border: 1px solid #23232B;
+}
+
+#opciones header{
+  background: #23232B;
+  color: #CFCFEA;
+  padding: 0.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#opciones span {font-size: 0.7em;}
+
+#opciones > div { margin: 0.5em; }
+
+#iva {
+  position: fixed;
+  top: 2.4rem;
+  right: -100%;
+  background: #bbb;
+  font-size: 0.8rem
+  width: 70%;
+  min-height: 20%;
+  padding-bottom: 0.6em;
+  border: 1px solid black;
+}
+
+#iva header {
+  background: #23232B;
+  color: #CFCFEA;
+  padding: 0.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#iva p {
+  color: #CFCFEA;
+  text-align: center;
+  margin: 1em;
+}
+
+#iva input { margin: 1em; }
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.Info {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0.2em;
+  background: #4A4A59;
+  color: #CFCFEA;
+  border-radius: 0.4em;
+}
+
+.clientes {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  color: #CFCFEA;
+  font-weight: bold;
+  background: #4A4A59;
+  padding: 0.2em;
+  border-radius: 0.4em;
+}

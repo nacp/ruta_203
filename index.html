@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="Ruta 203 de Nicolás Cualanglo :D">
+  <title>Ruta 203</title>
+  <script src="js/dias.js"></script>
+  <script src="js/iva.js"></script>
+  <link rel="stylesheet" href="./estilos/estilo.css">
+</head>
+
+<body onload="ruta_hoy()">
+<!-- Título -->
+  <header class="cabecera">
+    <h1>Ruta 203</h1>
+  </header>
+
+  <nav>
+    <input id="ABC" type="checkbox" onChange=ruta()>
+    <label for="ABC" class="abc-btn"></label>
+
+    <input type="button" name="prev" value="<" onclick="dia_ant()">
+    <select id="dias" name="opciones2" onChange=ruta()>
+      <option value=0>Domingo</option>
+      <option value=1>Lunes</option>
+      <option value=2>Martes</option>
+      <option value=3>Miércoles</option>
+      <option value=4>Jueves</option>
+      <option value=5>Viernes</option>
+      <option value=6>Sábado</option>
+    </select>
+
+    <input type="button" name="next" value=">" onclick="dia_sig()">
+
+    <input id="boton_hoy" type=button value=HOY onclick="ruta_hoy()"">
+  </nav>
+
+  <main class="contenido">
+
+    <section id="Domingo">
+      <h2>Domingo</h2>
+      <p style="text-align: center; margin: 2em; color: #000;">¡Hoy no se trabaja! :D</p>
+    </section>
+
+    <section id="Lunes">
+      <h2>Lunes</h2>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div  class="cliente">Keneltur S.A.</div>
+                <div class="datos"><em>14:00</em>|<em>$</em>|<em>Lunes</em></div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+
+        <div class="caja">
+            <div style="width:80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Le Majestic S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Leonardo Bizarra</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Míguez Conde, Manuel</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Adrián Lain</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Carol Muñíz</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Viviana Nieto</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Yenniffer Coronado</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Nelson</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">JJJ S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Federico Rariz</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Vimi Ltda.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Panadería La Gran Flauta</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Leonardo Negri</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Jorge Larrosa</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Marne Ltda.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Pumeda Ltda.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Mera y Mera</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Leonardo Enrico</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Romero</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Eduardo Álvarez</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Giaco Fran S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Teriban S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Mario Arbelo.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Soledad Vasquez</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Almacén La Familia</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Parado y Fleitas</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Baltimar S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Doña Pancha</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+    </section>
+	
+    <section id="Martes">
+      <h2>Martes</h2>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Goñi Hnos. S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Tonicor</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Ronylend S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Walter Rosas</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Soditur S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Palticor S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">María Soledad Muíño</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Silvia Caetano</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Panifor S.A. (Las Dona’s)</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Alejandro Cabrera</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Edison</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Silvia Álvarez</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Andrea Azzolini</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Washinton González</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Susana Panosain</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Mónica Pérez</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Sebastián Mastracucci</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Tiki S.C.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Nelson Romero</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Ma-Fe</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Panifor S.A. (Las Donas II)</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Sebastián Mezzetti</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Ana Romaniello</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Barbiyola S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Famintal S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">La Social Ltda.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">El Sordo Fernández Ltda.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Acelana S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Enrique Valenzuela</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Mauro y Enrique Valenzuela</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">La Fama S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+    </section>
+	
+    <section id="Miercoles">
+      <h2>Miércoles</h2>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">El Tejano S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Geribon Resquion</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Kimer S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Keneltur S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Le Majestic S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Stella Prais</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Mónica Ortíz</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Stella Maris</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Sonia Garay</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Jesús Sosa</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Rialtur S.A. (C.U.T.C.S.A.)</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Rialtur S.A. (Empleados)</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Gabi Maxi S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Cumbay Marta</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Fabiana Gaimari Ortíz</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">María de los Ángeles Furtado</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Altamirano S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Pedro Szetucha</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Cooperativa Gastrocoop</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Elizabeth Almeda</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Roberto Sinigoti</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Inashy S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Gamaris Ltda.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">María Ana Rodríguez</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Ángel Alonso</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Lourdes Larrosa</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Lorena Guerra</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Pedro Moreno</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Marisa Camaño</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Baltimar S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Alencur S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Almacén Laduche</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Juan Eduardo Ramos de los Ríos</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Ussel S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Martín Parodi</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">San Javier Ltda</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+	  </section>
+
+    <section id="Jueves">
+      <h2>Jueves</h2>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Jorge Larrosa</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Olga González</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Belroap</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Omar López</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Mera y Mera</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Panadería La Gran Flauta</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Mauricio Mendoza</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Vimi Ltda.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Federico Rariz</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Nelson</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Mario Arbelo</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Teriben S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Elizabet Call</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Edgar Pena</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Hagop Cemerlian</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Flavia Pérez</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Tonicor</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Nilvia Rivero</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Goñi Hnos. S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Almacén La Familia</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Valentín Heguy</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Victor Pimentel</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Parado y Fleitas</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Palticor S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Soditur S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Viernes">
+      <h2>Viernes</h2>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Keneltur S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">El Sordo Fernández Ltda.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Acelana S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Mauro y Enrique Valenzuela</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">La Fama S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Stella Prais</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Ma-Fe</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Gastronomía del Sur Ltda.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Eugenia García</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">María Ana Rodríguez</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Cristina Raimondi</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Jesús Sosa</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Patricia Silva</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Rialtur S.A. (CUTCSA)</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Cooperativa Gastrocoop</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Pedro Szetucha</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Altamirano S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Jenifer Arias</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Michael Monzón</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Lucas A. Prado Díaz</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Claudia Capo</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">La Mundial S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Gonzalo Avelenda</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Luis Alberto Díaz Machado</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Italmarket S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Olímpica 12 S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Edison</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Alejandro Cabrera</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Baltimar S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Alencur S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Almacén Laduche</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Barbiyola S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Famintal S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">La Social Ltda.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Ana Romaniello</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Sabado">
+      <h2>Sábado</h2>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Kimer S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Ly S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Ussel S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Obacor S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Soditur S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Palticor S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Goñi Hnos. Ltda.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onclick="(Eliminar(this))">
+                <div class="cliente">Erize S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Fabiana Gaimari Ortíz</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Gabi Maxi S.R.L.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Daniel Antonio Rodríguez</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Gamaris Ltda.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Grunullu y Grunullu</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Inashy S.A.</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Sole</div>
+                <div class="datos">datos</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><img src="./img/ubi.svg"></div>
+            </div>
+        </div>
+    </section>
+
+	  <!-- Aquí está la ruta ordenada alfabéticamente. -->
+    <section id="ABLunes">
+      <h2>Lunes</h2>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Adrián Lain</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Almacén La Familia</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Baltimar S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Carol Muñíz</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Doña Pancha</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Eduardo Álvarez</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Federico Rariz</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Giaco Fran S.R.L.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">JJJ S.R.L.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Jorge Larrosa</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Keneltur S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Le Majestic S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Leonardo Bizarra</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Leonardo Enrico</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Leonardo Negri</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Mario Arbelo.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Marne Ltda.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Mera y Mera</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Míguez Conde</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Nelson</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Panadería Gran Flauta</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Parado y Fleitas</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Pumeda Ltda.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Romero</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Soledad Vasquez</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Teriban S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Vimi Ltda.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Viviana Nieto</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Yenniffer Coronado</div></div>
+    </section>
+
+    <section id="ABMartes">
+      <h2>Martes</h2>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Acelana S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Alejandro Cabrera</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Ana Romaniello</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Andrea Azzolini</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Barbiyola S.R.L.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Edison</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">El Sordo Fernández</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Enrique Valenzuela</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Famintal S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Goñi Hnos. S.R.L.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">La Fama S.R.L.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">La Social Ltda.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Ma-Fe</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">María Soledad Muíño</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Mauro y E. Valenzuela</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Mónica Pérez</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Nelson Romero</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Palticor S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Panifor S.A. (I)</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Panifor S.A. (II)</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Ronylend S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Sebastián Mastracucci</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Sebastián Mezzetti</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Silvia Álvarez</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Silvia Caetano</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Soditur S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Susana Panosain</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Tiki S.C.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Tonicor</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Walter Rosas</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Washinton González</div></div>
+    </section>
+
+    <section id="ABMiercoles">
+      <h2>Miércoles</h2>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Alencur S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Almacén Laduche</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Altamirano S.R.L.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Ángel Alonso</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Baltimar S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Coop. Gastrocoop</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Cumbay Marta</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">El Tejano S.R.L.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Elizabeth Almeda</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Fabiana Gaimari Ortíz</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Gabi Maxi S.R.L.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Gamaris Ltda.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Geribon Resquion</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Inashy S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Jesús Sosa</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Juan E. Ramos</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Keneltur S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Kimer S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Le Majestic S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Lorena Guerra</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Lourdes Larrosa</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">María Ana Rodríguez</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">María Ángeles Furtado</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Marisa Camaño</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Martín Parodi</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Mónica Ortíz</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Pedro Moreno</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Pedro Szetucha</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Rialtur S.A. (C)</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Rialtur S.A. (E)</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Roberto Sinigoti</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">San Javier Ltda</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Sonia Garay</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Stella Maris</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Stella Prais</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Ussel S.A.</div></div>
+    </section>
+
+    <section id="ABJueves">
+      <h2>Jueves</h2>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Almacén La Familia</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Belroap</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Edgar Pena</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Elizabet Call</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Federico Rariz</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Flavia Pérez</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Goñi Hnos. Ltda.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Hagop Cemerlian</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Jorge Larrosa</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Mario Arbelo</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Mauricio Mendoza</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Mera y Mera</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Nelson</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Nilvia Rivero</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Olga González</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Omar López</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Palticor S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Panadería La Gran Flauta</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Parado y Fleitas</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Soditur S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Teriban S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Tonicor</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Valentin Heguy</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Victor Pimentel</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Vimi Ltda.</div></div>
+    </section>
+
+    <section id="ABViernes">
+      <h2>Viernes</h2>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Acelana S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Alejandro Cabrera</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Alencur S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Almacén Laduche</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Altamirano S.R.L.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Ana Romaniello</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Baltimar S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Barbiyola S.R.L.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Claudia Capo</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Coop. Gastrocoop</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Cristina Raimondi</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Edison</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">El Sordo Fernández</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Eugenia García</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Famintal S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Gastr. del Sur</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Gonzalo Avelenda</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Italmarket S.R.L.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Jenifer Arias</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Jesús Sosa</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Keneltur S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">La Fama S.R.L.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">La Mundial S.R.L.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">La Social Ltda.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Lucas A. Prado Díaz</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Luis A. Díaz Machado</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Ma-Fe</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">María Ana Rodríguez</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Mauro y E. Valenzuela</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Michael Monzón</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Olímpica 12 S.R.L.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Patricia Silva</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Pedro Szetucha</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Rialtur S.A. (C)</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Stella Prais</div></div>
+    </section>
+
+    <section id="ABSabado">
+      <h2>Sábado</h2>
+          <div><div class="cliente_abc" onClick="(Eliminar(this))">Daniel A. Rodríguez</div></div>
+          <div><div class="cliente_abc" onClick="(Eliminar(this))">Fabiana Gaimari Ortíz</div></div>
+          <div><div class="cliente_abc" onClick="(Eliminar(this))">Gabi Maxi S.R.L.</div></div>
+          <div><div class="cliente_abc" onClick="(Eliminar(this))">Gamaris Ltda.</div></div>
+          <div><div class="cliente_abc" onClick="(Eliminar(this))">Goñi Hnos. Ltda.</div></div>
+          <div><div class="cliente_abc" onClick="(Eliminar(this))">Grunullu y Grunullu</div></div>
+          <div><div class="cliente_abc" onClick="(Eliminar(this))">Inashy S.A.</div></div>
+          <div><div class="cliente_abc" onClick="(Eliminar(this))">Kimer S.A.</div></div>
+          <div><div class="cliente_abc" onClick="(Eliminar(this))">Ly S.R.L.</div></div>
+          <div><div class="cliente_abc" onClick="(Eliminar(this))">Obacor S.A.</div></div>
+          <div><div class="cliente_abc" onClick="(Eliminar(this))">Palticor S.A.</div></div>
+          <div><div class="cliente_abc" onClick="(Eliminar(this))">Soditur S.A.</div></div>
+          <div><div class="cliente_abc" onClick="(Eliminar(this))">Sole.</div></div>
+          <div><div class="cliente_abc" onClick="(Eliminar(this))">Ussel S.A.</div></div>
+    </section>
+</main>
+
+<!-- Menú de IVA -->
+<input type="checkbox" id="btn-iva">
+<label for="btn-iva" class="iva-btn"></label>
+
+<div id="iva">
+    <header>Cálculo IVA</header>
+    
+    <input type="number" id="iva_num"><br>
+    <input type="button" name="bton iva" value="Calcular" onclick="calc_iva(iva_num)">
+    <p id="resultado"></p>
+</div>
+
+<!-- Contador de clientes -->
+<div class="clientes"><span id="cli_quedan">25</span>/<span id="cli_tot">25</span></div>
+</body>
+</html>
