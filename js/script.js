@@ -100,7 +100,7 @@ function ruta() {
 }  // Fin ruta.
 
 function dia_ant() {
-  var lista, dia, ant;
+  var lista, dia;
 
   lista = document.getElementById("dias");
   dia = lista.selectedIndex;
@@ -114,7 +114,7 @@ function dia_ant() {
 }
 
 function dia_sig() {
-  var lista, dia, sig;
+  var lista, dia;
 
   lista = document.getElementById("dias");
   dia = lista.selectedIndex;
