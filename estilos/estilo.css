@@ -46,7 +46,7 @@ nav {
 
 .abc-btn {
   margin: 0.3em;
-  padding: 0.3em;
+  padding: 1em;
   border-radius: 0.5em;
   color: #CFCFEA;
   font-weight: bold;
@@ -56,13 +56,19 @@ nav {
 nav > select {
   margin: 0.3em;
   border-radius: 0.5em;
+  border-style: none;
+  height: 4em;
+  font-weight: bold;
 }
 
 input[type=button] {
   margin: 0.3em;
-  border-radius: 1.0em;
+  border-radius: 0.5em;
   padding: 0.5em;
   font-weight: bold;
+  width: 4em;
+  height: 4em;
+  border-style: none;
 }
 
 section { 
