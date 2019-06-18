@@ -20,7 +20,7 @@ body {
   width: 100%;
 }
 
-main {
+.contenido {
   display: flex;
   justify-content: center;
   width: 95%;
@@ -33,7 +33,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  widows: 100%;
+  width: 100%;
 }
 
 #ABC {display: none;}
