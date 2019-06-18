@@ -95,8 +95,6 @@ function ruta_hoy(Primero) { /* Primero indica si es la primera vez que
   lista = document.getElementById("dias")
   lista.selectedIndex = dia;
 
-  sessionStorage.setItem("C_Hoy", 0);
-
   if (Primero) {
     switch (dia) {
       case 1:
