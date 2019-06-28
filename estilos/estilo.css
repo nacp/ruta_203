@@ -245,8 +245,8 @@ input[type=number] {
 
 .clientes {
   position: fixed;
-  right: 0;
-  bottom: 0;
+  right: 1em;
+  bottom: 0.5em;
   color: #CFCFEA;
   font-weight: bold;
   background: #4A4A59;
