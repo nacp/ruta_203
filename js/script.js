@@ -45,7 +45,7 @@ function Ruta_dia(dia) { //Función que devuelve la ruta del día.
       break;
     case 5:
        document.getElementById("Viernes").style.display="block";
-       contador.innerHTML=37;
+       contador.innerHTML=38;
       break;
     case 6:
        document.getElementById("Sabado").style.display="block";
@@ -107,10 +107,10 @@ function ruta_hoy(Primero) { /* Primero indica si es la primera vez que
         sessionStorage.setItem("C_Hoy", 36);
         break;
       case 4:
-        sessionStorage.setItem("C_Hoy", 29);
+        sessionStorage.setItem("C_Hoy", 30);
         break;
-      case 5:Ussel 
-        sessionStorage.setItem("C_Hoy", 37);
+      case 5: 
+        sessionStorage.setItem("C_Hoy", 38);
         break;
       case 6:
         sessionStorage.setItem("C_Hoy", 15);
@@ -175,7 +175,7 @@ function dia_sig() {
 }
 
 function Eliminar(AA){ 
-  var hoy, lista, abc, cliente, visitados;
+  var hoy, lista, abc;
 
   lista = document.getElementById("dias");
   hoy = new Date();
