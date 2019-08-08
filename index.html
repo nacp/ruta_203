@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <meta name="description" content="Ruta 203 de Nicolás Cualanglo :D">
+  <meta name="description" content="Ruta 203">
   <title>Ruta 203</title>
   <script src="js/script.js"></script>
-  <script src="js/iva.js"></script>
   <link rel="stylesheet" href="./estilos/estilo.css">
 </head>
 
@@ -66,6 +65,16 @@
             </div>
         </div>
         
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Gastronomía del Sur</div>
+                <div class="datos">Monto | Para lunes</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><a target="_blank" href="https://goo.gl/maps/dA4zwRAQWgSQ9ohe6"><img src="./img/ubi.svg"></a></div>
+            </div>
+        </div>
+
         <div class="caja">
             <div style="width: 80%;" onClick="(Eliminar(this))">
                 <div class="cliente">JJJ S.R.L.</div>
@@ -1405,6 +1414,26 @@
         </div>
 
         <div class="caja">
+            <div style="width:80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Le Majestic S.A.</div>
+                <div class="datos">15:00 | Hace pedido.</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><a target="_blank" href="https://goo.gl/maps/qVmXCBht58H2"><img src="./img/ubi.svg"></a></div>
+            </div>
+        </div>
+
+        <div class="caja">
+            <div style="width: 80%;" onClick="(Eliminar(this))">
+                <div class="cliente">Ana Romaniello</div>
+                <div class="datos">&nbsp;</div>
+            </div>
+            <div style="width: 20%;">
+                <div class="ubicacion"><a target="_blank" href="https://goo.gl/maps/9LLxY7CqG2s"><img src="./img/ubi.svg"></a></div>
+            </div>
+        </div>
+
+        <div class="caja">
             <div style="width: 80%;" onClick="(Eliminar(this))">
                 <div class="cliente">Stella Prais</div>
                 <div class="datos">Para lunes</div>
@@ -1536,16 +1565,6 @@
 
         <div class="caja">
             <div style="width: 80%;" onClick="(Eliminar(this))">
-                <div class="cliente">Gastronomía del Sur</div>
-                <div class="datos">Monto | Para lunes</div>
-            </div>
-            <div style="width: 20%;">
-                <div class="ubicacion"><a target="_blank" href="https://goo.gl/maps/dA4zwRAQWgSQ9ohe6"><img src="./img/ubi.svg"></a></div>
-            </div>
-        </div>
-
-        <div class="caja">
-            <div style="width: 80%;" onClick="(Eliminar(this))">
                 <div class="cliente">Michael Monzón</div>
                 <div class="datos">Monto | Para lunes</div>
             </div>
@@ -1626,36 +1645,6 @@
 
         <div class="caja">
             <div style="width: 80%;" onClick="(Eliminar(this))">
-                <div class="cliente">Baiona Cedes, Hugo</div>
-                <div class="datos">Hace pedido | Monto</div>
-            </div>
-            <div style="width: 20%;">
-                <div class="ubicacion"><a target="_blank" href="https://goo.gl/maps/jtyf1PoWtRF2"><img src="./img/ubi.svg"></a></div>
-            </div>
-        </div>
-
-        <div class="caja">
-            <div style="width: 80%;" onClick="(Eliminar(this))">
-                <div class="cliente">Silvia Caetano</div>
-                <div class="datos">14:00</div>
-            </div>
-            <div style="width: 20%;">
-                <div class="ubicacion"><a target="_blank" href="https://goo.gl/maps/C3ugdorwUak"><img src="./img/ubi.svg"></a></div>
-            </div>
-        </div>
-
-        <div class="caja">
-            <div style="width: 80%;" onClick="(Eliminar(this))">
-                <div class="cliente">Alejandro Cabrera</div>
-                <div class="datos">&nbsp;</div>
-            </div>
-            <div style="width: 20%;">
-                <div class="ubicacion"><a target="_blank" href="https://goo.gl/maps/jejRwCvrLwL2"><img src="./img/ubi.svg"></a></div>
-            </div>
-        </div>
-
-        <div class="caja">
-            <div style="width: 80%;" onClick="(Eliminar(this))">
                 <div class="cliente">Baltimar S.A.</div>
                 <div class="datos">desde 13:30 a 15:00 | Hace pedido</div>
             </div>
@@ -1724,15 +1713,6 @@
             </div>
         </div>
 
-        <div class="caja">
-            <div style="width: 80%;" onClick="(Eliminar(this))">
-                <div class="cliente">Ana Romaniello</div>
-                <div class="datos">&nbsp;</div>
-            </div>
-            <div style="width: 20%;">
-                <div class="ubicacion"><a target="_blank" href="https://goo.gl/maps/9LLxY7CqG2s"><img src="./img/ubi.svg"></a></div>
-            </div>
-        </div>
     </section>
 
     <section id="Sabado">
@@ -1899,6 +1879,7 @@
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Doña Pancha</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Eduardo Álvarez</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Federico Rariz</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Gastronomía Del Sur</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Gimeno Bellucci, Erika</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">JJJ S.R.L.</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Jorge Larrosa</div></div>
@@ -2009,6 +1990,7 @@
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Goñi Hnos. Ltda.</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Hagop Cemerlian</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Jorge Larrosa</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Kanta S.A.</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Mario Arbelo</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Mera y Mera</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Nelson</div></div>
@@ -2046,7 +2028,6 @@
         <div><div class="cliente_abc" onClick="(Eliminar(this))">El Sordo Fernández</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Eugenia García</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Famintal S.A.</div></div>
-        <div><div class="cliente_abc" onClick="(Eliminar(this))">Gastronomía del Sur</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Gonzalo Avelenda</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Jesús Sosa</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Keneltur S.A.</div></div>
@@ -2054,6 +2035,7 @@
         <div><div class="cliente_abc" onClick="(Eliminar(this))">La Fama S.R.L.</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">La Mundial S.R.L.</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">La Social Ltda.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Le Majestic S.A.</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Lucas A. Prado Díaz</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Luis A. Díaz Machado</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Ma-Fe</div></div>
@@ -2091,15 +2073,15 @@
 
 <!-- Menú de IVA -->
 <!--<input type="checkbox" id="btn-iva">
-<label for="btn-iva" class="iva-btn"></label>
+<label for="btn-iva" class="iva-btn"></label> -->
 
 <div id="iva">
     <header>Cálculo IVA</header>
     
     <input type="number" id="iva_num"><br>
-    <input type="button" name="bton iva" value="Calcular" onclick="calc_iva(iva_num)">
+    <input type="button" name="bton iva" value="Calcular" onclick="">
     <p id="resultado"></p>
-</div>-->
+</div>
 
 <!-- Contador de clientes -->
 <div class="clientes" id="contador"><span id="cli_quedan">25</span><span id="cli_tot">25</span></div>
