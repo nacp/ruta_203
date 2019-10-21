@@ -1,13 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-}
-body {
-  font-family: Sans;
-  background: #CFCFEA;
-  padding-top: 3rem;
+  border-color: black;
 }
 
+body {
+  font-family: Sans;
+  background: white;
+  padding-top: 3rem;
+}
 
 .cabecera {
   position: fixed;
@@ -15,21 +16,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #23232B;
-  color: #CFCFEA;
+  background: white;
+  color: black;
   width: 100%;
+  border-style: solid;
+  border-width: 0 0 2px 0;
 }
 
-.contenido {
-  display: flex;
-  justify-content: center;
-  width: 95%;
-  margin: 0 auto;
-  padding-top: 0.5em;
-  padding-bottom: 2em;
-}
+
 
 nav {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,100 +55,108 @@ nav {
   background: #23232B;
 }
 
-nav > select {
+select {
   margin: 0.3em;
   border-radius: 0.5em;
   border-style: none;
-  height: 4em;
+  background-color: white;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   font-weight: bold;
+  font-size: 2em;
 }
 
 input[type=button] {
   margin: 0.3em;
-  border-radius: 0.5em;
-  padding: 0.5em;
+  border-radius: 2em;
+  padding: 0.2em;
   font-weight: bold;
-  width: 4em;
-  height: 4em;
-  border-style: none;
+  width: 3em;
+  height: 3em;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
 }
+
+.contenido {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.8em;
+  padding-bottom: 4em;
+  }
 
 section { 
-  width: 100%;
+  flex-basis: 100%;
+  flex-direction: row;
   margin: 0.3em;
-  color: #CFCFEA;
+  color: #000;
   font-weight: bold;
 }
 
-section > h2 {
-  text-align: center;
-  color: #23232B;
-}
-
-/*section > div {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  cursor: pointer;
-}
-
-section > div > div {
-  padding: 0.6em;
-  margin: 0.3em;
-  background: #c33;
-  border-radius: 0.5em;
-  width: 80%;
-}
-*/
 .caja {
-  min-width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 100%;
+  justify-content: center;
+  flex-basis: 100%;
   cursor: pointer;
   text-align: center;
+  margin: 0.2em;
 }
-
-.caja > div {
-  padding: 0;
-  margin: 0;
-}
-
-.cliente, .cliente_abc { background: #4A4A59; }
 
 .cliente {
+  min-width: 70%;
+  margin: 3px;
+  flex-grow: 1;
+}
+
+.cliente-nombre {
+  background: white;
   padding: 0.4em 0.4em 0 0.4em;
+  border: 1px solid;
   border-radius: 1.0em 1.0em 0 0;
 }
 
 .cliente_abc {
+  border: 2px solid;
   border-radius: 1em;
   padding: 0.5em;
   margin: 0.5em;
   cursor: pointer;
 }
 
-.datos {
-  background: #616182;
+.cliente-datos {
+  background: #cfcfea;
   padding: 0.2em 0.2em 0.2em 0.2em;
+  border: 1px solid;
   border-radius: 0 0 1em 1em;
-  height: 35%;
   font-size: 0.8em;
 }
 
 .ubicacion {
+  flex-grow: 1;
   background: #CFCFEA;
-  text-align: center;
-  margin: 0.1em;
-  border-radius: 0.5em;
-  border-color: #616182;
-  border-style: solid;
-  padding: 0.3em;
+  border-radius: 2.5em;
+  border: 1px solid;
+  padding: 0.1em;
+  height: 40px;
+  max-width: 40px;
+  margin: 3px;
+}
+
+.inconsistencia {
+  flex-grow: 1;
+  background: #fff;
+  border: 1px solid;
+  border-radius: 2em;
+  height: 40px;
+  width: 40px;
+  margin: 3px;
 }
 
 img {
-  width: 75%;
+  width: 40px;
 }
 
 .Inco {
@@ -173,7 +183,7 @@ img {
   right: 0.3em;
 }
 
-#btn-menu, #btn-iva {display: none;}
+/*#btn-menu, #btn-iva {display: none;}*/
 
 #btn-menu:checked ~ #opciones { left: 0; }
 
@@ -201,7 +211,7 @@ img {
 
 #opciones > div { margin: 0.5em; }
 
-#iva {
+/*#iva {
   position: fixed;
   top: 2.4rem;
   right: -100%;
@@ -211,6 +221,7 @@ img {
   min-height: 20%;
   padding-bottom: 0.6em;
   border: 1px solid black;
+  z-index: 100;
 }
 
 #iva header {
@@ -226,7 +237,7 @@ img {
   text-align: center;
   margin: 1em;
 }
-
+*/
 #iva input { margin: 1em; }
 
 input[type=number] {
@@ -246,10 +257,13 @@ input[type=number] {
 .clientes {
   position: fixed;
   right: 1em;
-  bottom: 0.5em;
-  color: #CFCFEA;
+  bottom: 4.3em;
+  color: black;
   font-weight: bold;
-  background: #4A4A59;
+  background: white;
   padding: 0.2em;
   border-radius: 0.4em;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
 }
