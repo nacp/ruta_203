@@ -8,7 +8,7 @@ function display_none() { // Función que oculta todos los días.
   document.getElementById("Viernes").style.display="none";
   document.getElementById("Sabado").style.display="none";
   document.getElementById("ABLunes").style.display="none";
-  document.getElementById("ABMartes").style.display="none";
+  document.getElementById("ABMartes").style.display="none"; 
   document.getElementById("ABMiercoles").style.display="none";
   document.getElementById("ABJueves").style.display="none";
   document.getElementById("ABViernes").style.display="none";
@@ -33,7 +33,7 @@ function Ruta_dia(dia) { //Función que devuelve la ruta del día.
       break;
 	 case 2:
       document.getElementById("Martes").style.display="block";
-      contador.innerHTML=35;
+      contador.innerHTML=33;
       break;
     case 3:
       document.getElementById("Miercoles").style.display="block";
@@ -41,11 +41,11 @@ function Ruta_dia(dia) { //Función que devuelve la ruta del día.
       break;
     case 4:
       document.getElementById("Jueves").style.display="block";
-      contador.innerHTML=29;
+      contador.innerHTML=27;
       break;
     case 5:
        document.getElementById("Viernes").style.display="block";
-       contador.innerHTML=38;
+       contador.innerHTML=33;
       break;
     case 6:
        document.getElementById("Sabado").style.display="block";
@@ -101,16 +101,16 @@ function ruta_hoy(Primero) { /* Primero indica si es la primera vez que
         sessionStorage.setItem("C_Hoy", 28);
         break;
       case 2:
-        sessionStorage.setItem("C_Hoy", 35);
+        sessionStorage.setItem("C_Hoy", 33);
         break;
       case 3:
         sessionStorage.setItem("C_Hoy", 36);
         break;
       case 4:
-        sessionStorage.setItem("C_Hoy", 30);
+        sessionStorage.setItem("C_Hoy", 27);
         break;
       case 5: 
-        sessionStorage.setItem("C_Hoy", 38);
+        sessionStorage.setItem("C_Hoy", 33);
         break;
       case 6:
         sessionStorage.setItem("C_Hoy", 15);
