@@ -4,36 +4,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="description" content="Ruta 203">
-  <title>Ruta 203 (ver 3.0 alpha)</title>
+  <title>Ruta 203</title>
   <script src="js/script.js"></script>
   <link rel="stylesheet" href="./estilos/estilo.css">
 </head>
 
 <body onload="ruta_hoy(true)">
 
-<!-- Título -->
+  <!-- Título -->
   <header class="cabecera">
-    <select id="dias" name="opciones2" onChange=ruta()>
-      <option value=0>Domingo</option>
-      <option value=1>Lunes</option>
-      <option value=2>Martes</option>
-      <option value=3>Miércoles</option>
-      <option value=4>Jueves</option>
-      <option value=5>Viernes</option>
-      <option value=6>Sábado</option>
+    <select id="dias" name="opciones2" onChange="ruta()">
+      <option value='0'>Domingo</option>
+      <option value='1'>Lunes</option>
+      <option value='2'>Martes</option>
+      <option value='3'>Miércoles</option>
+      <option value='4'>Jueves</option>
+      <option value='5'>Viernes</option>
+      <option value='6'>Sábado</option>
     </select>
 
-    <input type="button" name="prev" value="<" onclick="dia_ant()">
-    <input type="button" name="next" value=">" onclick="dia_sig()">
-
+    <input type="button" name="prev" value="&lt;" onclick="dia_ant()">
+    <input type="button" name="next" value="&gt;" onclick="dia_sig()">
 
   </header>
 
   <nav>
-    <input id="ABC" type="checkbox" onChange=ruta()>
+    <input id="ABC" type="checkbox" onChange="ruta()">
     <label for="ABC" class="abc-btn"></label>
 
-    <input id="boton_hoy" type=button value=HOY onclick="ruta_hoy(false)">
+    <input id="boton_hoy" type="button" value="HOY" onclick="ruta_hoy(false)">
   </nav>
 
   <main class="contenido">
@@ -77,18 +76,6 @@
             </div>
             <div class="ubicacion">
                 <a target="_blank" href="https://goo.gl/maps/dA4zwRAQWgSQ9ohe6">
-                    <img src="./img/ubi.svg">
-                </a>
-            </div>
-        </div>
-
-        <div class="caja">
-            <div class="cliente" onClick="(Eliminar(this))">
-                <div class="cliente-nombre">JJJ S.R.L.</div>
-                <div class="cliente-datos">13:00 | Hace pedido</div>
-            </div>
-            <div class="ubicacion">
-                <a target="_blank" href="https://goo.gl/maps/oFegGJFnmNB2">
                     <img src="./img/ubi.svg">
                 </a>
             </div>
@@ -2146,7 +2133,6 @@
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Federico Rariz</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Gastronomía Del Sur</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Gimeno Bellucci, Erika</div></div>
-        <div><div class="cliente_abc" onClick="(Eliminar(this))">JJJ S.R.L.</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Jorge Larrosa</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Keneltur S.A.</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Le Majestic S.A.</div></div>
@@ -2162,7 +2148,6 @@
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Romero</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Soledad Vasquez</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Teriban S.A.</div></div>
-        <div><div class="cliente_abc" onClick="(Eliminar(this))">Vimi Ltda.</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Viviana Netto</div></div>
     </section>
 
@@ -2179,11 +2164,9 @@
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Famintal S.A.</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Goñi Hnos. S.R.L.</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">La Fama S.R.L.</div></div>
-        <div><div class="cliente_abc" onClick="(Eliminar(this))">La Social Ltda.</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Ma-Fe</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Maciel Lemos, Gonzálo</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">María Soledad Muíño</div></div>
-        <div><div class="cliente_abc" onClick="(Eliminar(this))">Mauro y E. Valenzuela</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Mónica Pérez</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Nelson Romero</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Palticor S.A.</div></div>
@@ -2211,7 +2194,8 @@
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Baltimar S.A.</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Coop. Gastrocoop</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Cumbay Marta</div></div>
-        <div><div class="cliente_abc" onClick="(Eliminar(this))">El Tejano S.R.L.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Daltiro S.A.</div></div>
+        <div><div class="cliente_abc" onClick="(Eliminar(this))">Daniel Antonio Rodríguez</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Elizabeth Almeda</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Gabi Maxi S.R.L.</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Gamaris Ltda.</div></div>
@@ -2299,14 +2283,12 @@
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Patricia Silva</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Pedro Szetucha</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Rialtur S.A. (C)</div></div>
-        <div><div class="cliente_abc" onClick="(Eliminar(this))">Silvia Caetano</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Sonia Garay</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Stella Prais</div></div>
         <div><div class="cliente_abc" onClick="(Eliminar(this))">Súper La Mundial</div></div>
     </section>
 
     <section id="ABSabado">
-          <div><div class="cliente_abc" onClick="(Eliminar(this))">Daniel A. Rodríguez</div></div>
           <div><div class="cliente_abc" onClick="(Eliminar(this))">Erize S.A.</div></div>
           <div><div class="cliente_abc" onClick="(Eliminar(this))">Gabi Maxi S.R.L.</div></div>
           <div><div class="cliente_abc" onClick="(Eliminar(this))">Gamaris Ltda.</div></div>
