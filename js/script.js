@@ -49,7 +49,7 @@ function Ruta_dia(dia) { //Función que devuelve la ruta del día.
       break;
     case 6:
        document.getElementById("Sabado").style.display="block";
-       document.getElementById("contador").style.dispay="none";
+       document.getElementById("contador").style.display="none";
       break;
   };
 
