@@ -29,27 +29,27 @@ function Ruta_dia(dia) { //Función que devuelve la ruta del día.
       break;
     case 1:
       document.getElementById("Lunes").style.display="block";
-      contador.innerHTML=28;
+      contador.innerHTML=sessionStorage.C_Lunes;
       break;
 	 case 2:
       document.getElementById("Martes").style.display="block";
-      contador.innerHTML=33;
+      contador.innerHTML=sessionStorage.C_Martes;
       break;
     case 3:
       document.getElementById("Miercoles").style.display="block";
-      contador.innerHTML=36;
+      contador.innerHTML=sessionStorage.C_Miercoles;
       break;
     case 4:
       document.getElementById("Jueves").style.display="block";
-      contador.innerHTML=27;
+      contador.innerHTML=sessionStorage.C_Jueves;
       break;
     case 5:
        document.getElementById("Viernes").style.display="block";
-       contador.innerHTML=33;
+       contador.innerHTML=sessionStorage.C_Viernes;
       break;
     case 6:
        document.getElementById("Sabado").style.display="block";
-       contador.innerHTML=15;
+       document.getElementById("contador").style.dispay="none";
       break;
   };
 
@@ -91,29 +91,42 @@ function ruta_hoy(Primero) { /* Primero indica si es la primera vez que
   hoy = new Date();
 
   dia = hoy.getDay();
-    
+  
+  // Obtengo la cantidad total de clientes por día
+  lunes = document.getElementById("Lunes").childElementCount;
+  martes = document.getElementById("Martes").childElementCount;
+  miercoles = document.getElementById("Miercoles").childElementCount;
+  jueves = document.getElementById("Jueves").childElementCount;
+  viernes = document.getElementById("Viernes").childElementCount;
+  
   lista = document.getElementById("dias")
   lista.selectedIndex = dia;
 
   if (Primero) {
+  
+    sessionStorage.setItem("C_Lunes", lunes);
+    sessionStorage.setItem("C_Martes", martes);
+    sessionStorage.setItem("C_Miercoles", miercoles);
+    sessionStorage.setItem("C_Jueves", jueves);
+    sessionStorage.setItem("C_Viernes", viernes);
+    
     switch (dia) {
       case 1:
-        sessionStorage.setItem("C_Hoy", 28);
+        sessionStorage.setItem("C_Hoy", lunes);
         break;
       case 2:
-        sessionStorage.setItem("C_Hoy", 33);
+        sessionStorage.setItem("C_Hoy", martes);
         break;
       case 3:
-        sessionStorage.setItem("C_Hoy", 36);
+        sessionStorage.setItem("C_Hoy", miercoles);
         break;
       case 4:
-        sessionStorage.setItem("C_Hoy", 27);
+        sessionStorage.setItem("C_Hoy", jueves);
         break;
       case 5: 
-        sessionStorage.setItem("C_Hoy", 33);
+        sessionStorage.setItem("C_Hoy", viernes);
         break;
       case 6:
-        sessionStorage.setItem("C_Hoy", 15);
         break;
     }
     document.getElementById("cli_quedan").innerHTML=sessionStorage.C_Hoy+"/";
@@ -125,7 +138,9 @@ function ruta_hoy(Primero) { /* Primero indica si es la primera vez que
 
 function ruta() {
 
-  var dia, lista, abc, cont_hoy, hoy;
+  var dia, lista, abc, cont_hoy, hoy, lunes;
+  
+  lunes = document.getElementById("Sabado");
 
   display_none();
 
@@ -141,8 +156,8 @@ function ruta() {
   if ( dia != hoy.getDay()) { cont_hoy.style.display="none"}
   else { cont_hoy.style.display="inline"};
 
-  if (!abc) { Ruta_dia(Number(dia)) }
-  else { RutaABC(Number(dia)) };
+  if (!abc) { Ruta_dia(parseInt(dia)) }
+  else { RutaABC(parseInt(dia)) };
 
 }  // Fin ruta.
 
