@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  border-color: black;
+}
+
+body {
+  font-family: Sans;
+  background: white;
+  padding-top: 3rem;
+}
+
+p {
+  text-align: center;
+  margin: 2em;
+  color: black;
+}
+
+.cabecera {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: black;
+  width: 100%;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#ABC {display: none;}
+
+#ABC + label:before { 
+  content: 'ABC';
+  background-color: white;
+  color: #23232B;
+  border-radius: 2em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #23232B;
+  padding: 0.7em;
+}
+
+
+#ABC:checked + label:before {
+  content: 'BAC';
+  background-color: #23232B;
+  color: white;
+}
+
+select {
+  margin: 0.3em;
+  border-radius: 0.5em;
+  border-style: none;
+  background-color: white;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+input[type=button] {
+  margin: 0.3em;
+  border-radius: 2em;
+  padding: 0.2em;
+  font-weight: bold;
+  width: 3em;
+  height: 3em;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+.contenido {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.8em;
+  padding-bottom: 4em;
+  }
+
+section {
+  flex-basis: 100%;
+  flex-direction: row;
+  margin: 0.3em;
+  color: #000;
+  font-weight: bold;
+}
+
+.caja {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 100%;
+  cursor: pointer;
+  text-align: center;
+  margin: 0.2em;
+}
+
+.cliente {
+  min-width: 70%;
+  margin: 3px;
+  flex-grow: 1;
+}
+
+.quincenal {
+  background-color: #CFCFEA;
+}
+
+.cliente-nombre {
+  padding: 0.4em 0.4em 0 0.4em;
+  border: 1px solid;
+  border-radius: 1.0em 1.0em 0 0;
+}
+
+.cliente_abc {
+  border: 2px solid;
+  border-radius: 1em;
+  padding: 0.5em;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+.cliente-datos {
+  background: #cfcfea;
+  padding: 0.2em 0.2em 0.2em 0.2em;
+  border: 1px solid;
+  border-radius: 0 0 1em 1em;
+  font-size: 0.8em;
+}
+
+.ubicacion {
+  flex-grow: 1;
+  background: #CFCFEA;
+  border-radius: 2.5em;
+  border: 1px solid;
+  padding: 0.1em;
+  height: 40px;
+  max-width: 40px;
+  margin: 3px;
+}
+
+.inconsistencia {
+  flex-grow: 1;
+  background: #fff;
+  border: 1px solid;
+  border-radius: 2em;
+  height: 40px;
+  width: 40px;
+  margin: 3px;
+}
+
+img {
+  width: 40px;
+}
+
+.Inco {
+  text-align: center;
+  font-weight: bold;
+  background: #616182;
+  margin: 0.1em;
+  border-radius: 0.5em;
+}
+
+.menu-btn, .iva-btn {
+  position: fixed;
+  top: 0.4em;
+  background: none;
+  width: 1.5em;
+  height: 1.5em;
+  border: solid 1px white;
+  border-radius: 100%;
+  margin-left: 0.3em;
+  transition: all 0.5s;
+}
+
+.iva-btn {
+  right: 0.3em;
+}
+
+/*#btn-menu, #btn-iva {display: none;}*/
+
+#btn-menu:checked ~ #opciones { left: 0; }
+
+#btn-iva:checked ~ #iva { right: 0; }
+
+#opciones {
+  position: fixed;
+  top: 2.4rem;
+  left: -100%;
+  background: #CFCFEA;
+  font-size: 0.8rem;
+  width: 70%;
+  border: 1px solid #23232B;
+}
+
+#opciones header{
+  background: #23232B;
+  color: #CFCFEA;
+  padding: 0.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#opciones span {font-size: 0.7em;}
+
+#opciones > div { margin: 0.5em; }
+
+/*#iva {
+  position: fixed;
+  top: 2.4rem;
+  right: -100%;
+  background: #bbb;
+  font-size: 0.8rem
+  width: 70%;
+  min-height: 20%;
+  padding-bottom: 0.6em;
+  border: 1px solid black;
+  z-index: 100;
+}
+
+#iva header {
+  background: #23232B;
+  color: #CFCFEA;
+  padding: 0.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#iva p {
+  color: #CFCFEA;
+  text-align: center;
+  margin: 1em;
+}
+*/
+#iva input { margin: 1em; }
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.Info {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0.2em;
+  background: #4A4A59;
+  color: #CFCFEA;
+  border-radius: 0.4em;
+}
+
+.clientes {
+  position: fixed;
+  right: 1em;
+  bottom: 4.3em;
+  color: black;
+  font-weight: bold;
+  background: white;
+  padding: 0.2em;
+  border-radius: 0.4em;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
