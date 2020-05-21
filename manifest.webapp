@@ -1,0 +1,13 @@
+{
+  "name": "Ruta 203",
+  "description": "Mi ruta del trabajo",
+  "launch_path": "/",
+  "icons": {
+    "128": "/img/128.png"
+  },
+  "developer": {
+    "name": "Nico",
+    "url": "http://nanatux.wordpress.com"
+  },
+  "default_locale": "es"
+}
