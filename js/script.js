@@ -49,7 +49,7 @@ function Ruta_dia(dia) { //Función que devuelve la ruta del día.
       break;
     case 6:
        document.getElementById("Sabado").style.display="block";
-       document.getElementById("contador").style.display="none";
+       contador.innerHTML=sessionStorage.C_Sabado;
       break;
   };
 
@@ -93,11 +93,12 @@ function ruta_hoy(Primero) { /* Primero indica si es la primera vez que
   dia = hoy.getDay();
   
   // Obtengo la cantidad total de clientes por día
-  lunes = document.getElementById("Lunes").childElementCount;
-  martes = document.getElementById("Martes").childElementCount;
-  miercoles = document.getElementById("Miercoles").childElementCount;
-  jueves = document.getElementById("Jueves").childElementCount;
-  viernes = document.getElementById("Viernes").childElementCount;
+  var lunes = document.getElementById("Lunes").childElementCount;
+  var martes = document.getElementById("Martes").childElementCount;
+  var miercoles = document.getElementById("Miercoles").childElementCount;
+  var jueves = document.getElementById("Jueves").childElementCount;
+  var viernes = document.getElementById("Viernes").childElementCount;
+  var sabado = document.getElementById("Sabado").childElementCount;
   
   lista = document.getElementById("dias")
   lista.selectedIndex = dia;
@@ -109,6 +110,7 @@ function ruta_hoy(Primero) { /* Primero indica si es la primera vez que
     sessionStorage.setItem("C_Miercoles", miercoles);
     sessionStorage.setItem("C_Jueves", jueves);
     sessionStorage.setItem("C_Viernes", viernes);
+    sessionStorage.setItem("C_Sabado", sabado);
     
     switch (dia) {
       case 1:
@@ -127,6 +129,7 @@ function ruta_hoy(Primero) { /* Primero indica si es la primera vez que
         sessionStorage.setItem("C_Hoy", viernes);
         break;
       case 6:
+        sessionStorage.setItem("C_Hoy", sabado);
         break;
     }
     document.getElementById("cli_quedan").innerHTML=sessionStorage.C_Hoy+"/";
@@ -138,10 +141,8 @@ function ruta_hoy(Primero) { /* Primero indica si es la primera vez que
 
 function ruta() {
 
-  var dia, lista, abc, cont_hoy, hoy, lunes;
+  var dia, lista, abc, cont_hoy, hoy;
   
-  lunes = document.getElementById("Sabado");
-
   display_none();
 
   hoy = new Date();
