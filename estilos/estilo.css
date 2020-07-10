@@ -88,6 +88,8 @@ input[type=button] {
 }
 
 .contenido {
+  max-width: 500px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   padding-top: 0.8em;
