@@ -7,13 +7,12 @@
 body {
   font-family: Sans;
   background: white;
-  padding-top: 3rem;
+  color: black;
 }
 
 p {
   text-align: center;
   margin: 2em;
-  color: black;
 }
 
 .cabecera {
@@ -53,6 +52,7 @@ nav {
   border-width: 1px;
   border-color: #23232B;
   padding: 0.7em;
+  cursor: pointer;
 }
 
 
@@ -60,6 +60,7 @@ nav {
   content: 'BAC';
   background-color: #23232B;
   color: white;
+  cursor: pointer;
 }
 
 select {
@@ -72,6 +73,7 @@ select {
   appearance: none;
   font-weight: bold;
   font-size: 2em;
+  cursor: pointer;
 }
 
 input[type=button] {
@@ -85,24 +87,16 @@ input[type=button] {
   border-style: solid;
   border-width: 1px;
   border-color: black;
+  cursor: pointer;
 }
 
 .contenido {
   max-width: 500px;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  padding-top: 0.8em;
+  padding-top: 3.8em;
   padding-bottom: 4em;
-  }
-
-section {
-  flex-basis: 100%;
-  flex-direction: row;
-  margin: 0.3em;
-  color: #000;
   font-weight: bold;
-}
+  }
 
 .caja {
   display: flex;
