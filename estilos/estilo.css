@@ -7,13 +7,12 @@
 body {
   font-family: Sans;
   background: white;
-  padding-top: 3rem;
+  color: black;
 }
 
 p {
   text-align: center;
   margin: 2em;
-  color: black;
 }
 
 .cabecera {
@@ -53,6 +52,7 @@ nav {
   border-width: 1px;
   border-color: #23232B;
   padding: 0.7em;
+  cursor: pointer;
 }
 
 
@@ -60,6 +60,7 @@ nav {
   content: 'BAC';
   background-color: #23232B;
   color: white;
+  cursor: pointer;
 }
 
 select {
@@ -72,6 +73,7 @@ select {
   appearance: none;
   font-weight: bold;
   font-size: 2em;
+  cursor: pointer;
 }
 
 input[type=button] {
@@ -85,55 +87,38 @@ input[type=button] {
   border-style: solid;
   border-width: 1px;
   border-color: black;
+  cursor: pointer;
 }
+
+/* ---- CONTENIDO PRINCIPAL ---- */
 
 .contenido {
-  display: flex;
-  justify-content: center;
-  padding-top: 0.8em;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 3.8em;
   padding-bottom: 4em;
-  }
-
-section {
-  flex-basis: 100%;
-  flex-direction: row;
-  margin: 0.3em;
-  color: #000;
   font-weight: bold;
-}
+  }
 
 .caja {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: 100%;
   cursor: pointer;
   text-align: center;
   margin: 0.2em;
+  min-height: 1cm;
 }
 
 .cliente {
-  min-width: 70%;
   margin: 3px;
   flex-grow: 1;
-}
-
-.quincenal {
-  background-color: #CFCFEA;
 }
 
 .cliente-nombre {
   padding: 0.4em 0.4em 0 0.4em;
   border: 1px solid;
   border-radius: 1.0em 1.0em 0 0;
-}
-
-.cliente_abc {
-  border: 2px solid;
-  border-radius: 1em;
-  padding: 0.5em;
-  margin: 0.5em;
-  cursor: pointer;
 }
 
 .cliente-datos {
@@ -145,17 +130,39 @@ section {
 }
 
 .ubicacion {
-  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #CFCFEA;
   border-radius: 2.5em;
   border: 1px solid;
   padding: 0.1em;
-  height: 40px;
-  max-width: 40px;
+  height: 1.2cm;
+  width: 1.2cm;
   margin: 3px;
 }
 
-.inconsistencia {
+.ubicacion  img {
+  width: 40px;
+}
+
+.quincenal {
+  background-color: #CFCFEA;
+}
+
+.cliente_abc {
+  display: flex;
+  align-items: center;
+  border: 2px solid;
+  border-radius: 1em;
+  padding: 0.5em;
+  margin: 0.5em;
+  cursor: pointer;
+  min-height: 1cm;
+}
+
+
+/* .inconsistencia {
   flex-grow: 1;
   background: #fff;
   border: 1px solid;
@@ -163,11 +170,7 @@ section {
   height: 40px;
   width: 40px;
   margin: 3px;
-}
-
-img {
-  width: 40px;
-}
+} */
 
 .Inco {
   text-align: center;
