@@ -2,117 +2,1211 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Ruta 203" />
-    <title>Ruta 203</title>
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" href="./estilos/estilo.css" />
-    <link rel="icon" type="image/png" href="img/128.png" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Ruta 203" />
+  <title>Ruta 203</title>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="./estilos/estilo.css" />
+  <link rel="icon" type="image/png" href="img/128.png" />
 </head>
 
 <body onload="ruta_hoy(true)">
 
-    <!-- Título -->
-    <header class="cabecera">
-        <div class="cabecera__contenedor">
-            <select id="dias" name="opciones2" onChange="ruta()">
-                <option value='0'>Domingo</option>
-                <option value='1'>Lunes</option>
-                <option value='2'>Martes</option>
-                <option value='3'>Miércoles</option>
-                <option value='4'>Jueves</option>
-                <option value='5'>Viernes</option>
-                <option value='6'>Sábado</option>
-            </select>
-            <div class="navigator">
-                <input type="button" name="prev" value="&lt;" onclick="dia_ant()" />
-                <input type="button" name="next" value="&gt;" onclick="dia_sig()" />
-            </div>
+  <!-- Título -->
+  <header class="cabecera">
+    <div class="cabecera__contenedor">
+      <select id="dias" name="opciones2" onChange="ruta()">
+        <option value='0'>Domingo</option>
+        <option value='1'>Lunes</option>
+        <option value='2'>Martes</option>
+        <option value='3'>Miércoles</option>
+        <option value='4'>Jueves</option>
+        <option value='5'>Viernes</option>
+        <option value='6'>Sábado</option>
+      </select>
+      <div class="navigator">
+        <input type="button" name="prev" value="&lt;" onclick="dia_ant()" />
+        <input type="button" name="next" value="&gt;" onclick="dia_sig()" />
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <input id="ABC" type="checkbox" onChange="ruta()" />
+    <label for="ABC" class="abc-btn"></label>
+
+    <input id="boton_hoy" type="button" value="HOY" onclick="ruta_hoy(false)" />
+  </nav>
+
+  <main class="contenido">
+
+    <section id="Domingo">
+      <p>¡Hoy no se trabaja! 💤</p>
+    </section>
+
+    <section id="Lunes">
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Pastorino Ltda</div>
+          <div class="cliente-datos">José Battle y Ordoñez 2840</div>
         </div>
-    </header>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/qZpnaN6kvicT2tyx8">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
 
-    <nav>
-        <input id="ABC" type="checkbox" onChange="ruta()" />
-        <label for="ABC" class="abc-btn"></label>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Rio Miño</div>
+          <div class="cliente-datos">8 de octubre</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="3313 https://goo.gl/maps/6vkB93TA482r6nAX6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
 
-        <input id="boton_hoy" type="button" value="HOY" onclick="ruta_hoy(false)" />
-    </nav>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Fabegold</div>
+          <div class="cliente-datos">8 de octubre 3090</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/PP3XYvBuvpCsVHkAA">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
 
-    <main class="contenido">
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Megamax S.A.</div>
+          <div class="cliente-datos">8 de octubre 3019</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/qxYuRAEUzq3vwgGE6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
 
-        <section id="Domingo">
-            <p>¡Hoy no se trabaja! 💤</p>
-        </section>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Enfa S.R.L.</div>
+          <div class="cliente-datos">Luis A. de Herrera 2635</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/F9jCYUPP8YPj2fWQA">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
 
-        <section id="Lunes">
-	    <div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Pastorino Ltda</div>
-    <div class="cliente-datos">José Battle y Ordoñez 2840</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/qZpnaN6kvicT2tyx8">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Mosende S.A.</div>
+          <div class="cliente-datos">Luis A. de Herrera 2254</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/KTzyApCroBhDqNpk6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Fediman S.A.</div>
+          <div class="cliente-datos">Cardal 3209</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/Zoy29B9d4T8t4EESA">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Maresca SRL</div>
+          <div class="cliente-datos">Francisco Simón 2148</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/yKoYAVFGPV8Zmfys6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Mauro Hernández</div>
+          <div class="cliente-datos">República Dominicana 2950</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/H73xbyfdcorwAMVG8">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Bowerey S.A.</div>
+          <div class="cliente-datos">Estero Belaco 2846</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/fLJpzXgYHcctJkcj6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Suárez Díaz G. y Umpierrez Baracoch</div>
+          <div class="cliente-datos">Monte Caseros 2590</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/2r49JdwB7LVk6TKp7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Fabián Berti</div>
+          <div class="cliente-datos">Monte Caseros 2584</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/uyxJjc4yTYwV7kyv6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Del Absto SRL</div>
+          <div class="cliente-datos">Martín Fierro 2579</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/XHB5YL251kvjArfN6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Forte Adige SA</div>
+          <div class="cliente-datos">Quijote 2499</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/WBbCHi736xK3fmPn9">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Zaifed</div>
+          <div class="cliente-datos">Caraguatay 2258</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/VmRxstYNru5jd79a8">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Graciela y José Meijón</div>
+          <div class="cliente-datos">Luis A. de Herrera 3117</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/QWnmRvBrj8MSniAE9">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Altamirano SRL</div>
+          <div class="cliente-datos">Altamirano 3246</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/1gEuKhUX26WNFH9D7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Rodríguez Enrique</div>
+          <div class="cliente-datos">Democracia 2496</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/cEKuqjGmEY44wGyB9">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Rivera Max S.R.L.</div>
+          <div class="cliente-datos">Isidoro de María 3055</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/eEiWND8mEe7saHaNA">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Fundación Parque Vacaciones UTE</div>
+          <div class="cliente-datos">Paraguay 2431 Piso 1</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/BMG7c1JDH8axqbR8A">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Acronar S.A.</div>
+          <div class="cliente-datos">Avda. Agraciada 2704</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/2AwuSKLmHkW765mSA">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Machitos S.R.L.</div>
+          <div class="cliente-datos">Zapicán 2549</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/hsFubvv8L16kxibs8">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Misurol S.A.</div>
+          <div class="cliente-datos">Baltasar Brum 2746</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/nJa8xVXmzoL3Y5pi8">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Tillenture S.A.</div>
+          <div class="cliente-datos">Baltazar Brum 3038</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/paBHyxbw31fxj9GQ6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Sebastián Machado</div>
+          <div class="cliente-datos">Progreso 949</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/GiHWkqtuC8rfspNm6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Porrati Fernández Stella Anahír</div>
+          <div class="cliente-datos">Agraciada 3055</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/tyNK8FXaxW2Zb6YT9">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Alvaréz Andrea</div>
+          <div class="cliente-datos">Grito de Asencio 1171</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/qru1Pm2boRRFDpLKA">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Ussel 511882</div>
+          <div class="cliente-datos">Bvar. Artigas 3750</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/qjrNgAxwAFEXiXsD9">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Bilwald S.A.</div>
+          <div class="cliente-datos">Millán 3294</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/6s1MecMphPFdmhs6A">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Desafío M y M</div>
+          <div class="cliente-datos">Luis A. de Herrera 4008</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/XpyKcA5xm6GNxNED6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">El Tata</div>
+          <div class="cliente-datos">Atahona 3607</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/AhQLzjXPUarjWgp76">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Rianjo Ltda</div>
+          <div class="cliente-datos">Rancagua 4070</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/o28GZENwSu6PFack8">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Aguiar y Ángelo</div>
+          <div class="cliente-datos">Guillermo Rodríquez 4752</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/arKyM1Jmk3KDEGmR9">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Bizalam S.A.</div>
+          <div class="cliente-datos">Ricardo Makinnon 5065</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/pKGPgJTfs7MAYjdL7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Silpas S.R.L.</div>
+          <div class="cliente-datos">Bernabé Michelena 4707</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/KFe9D5q2iqjM1ai69">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Ferreira Rodríguez Laura Mariela</div>
+          <div class="cliente-datos">Pozzolo 3933 (¡No aparece en el mapa!)</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="Martes">
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Los Ángeles</div>
+          <div class="cliente-datos">Luis A. Herrera 2251</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/YueS7Y3pokAbWjuM8">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Luciana Sosa Dobal</div>
+          <div class="cliente-datos">Luis A. de Herrera 2275</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/gTyms6HChrBtNZDS8">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Coop. de las Fuerzas Armadas - COFAS</div>
+          <div class="cliente-datos">Hosp. Militar</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/iRtm4gebs6cPhhyX7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Asociación Cooperativa Electoral</div>
+          <div class="cliente-datos">8 de octubre 2897</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/m19qHDUjcYExrKEV7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Natalia García</div>
+          <div class="cliente-datos">Carlos Anaya 2839</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/bRqtPCT4wGTGv4d99">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Vargas Santiago</div>
+          <div class="cliente-datos">Nueva Palmira 1952</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/3jp2BGGpX4T3bMFF8">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Araujo Rebollo Silvia y Ramos Go</div>
+          <div class="cliente-datos">San Martín 2240</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/PyME5TUj5Du1ZVQYA">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Sucesores Horacio Cremona</div>
+          <div class="cliente-datos">Agraciada 2346</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/97bq3wDyCN9FKmwMA">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Daniel Corbo</div>
+          <div class="cliente-datos">Colombia 1203</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/GaF2kNTFaoPbf4y26">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Rondeau Ltda.</div>
+          <div class="cliente-datos">Rondeau 2109</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/vuypk2KvgAvubLHKA">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Fundación Parque Vacaciones UTE</div>
+          <div class="cliente-datos">Guatemala 1076</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/amdri43EdrBNTGoB7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Alvarez Da Rosa, Andrea Isabel</div>
+          <div class="cliente-datos">General Luna 1299</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/JhBYpHjY4kJvt4Zw6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Maria G. Domínguez (Mar y Sol Marke</div>
+          <div class="cliente-datos">Agraciada 2795</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Luna S.R.L. (ANCAP)</div>
+          <div class="cliente-datos">Bvar. Artigas 3785</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/D63aSDw6qTRdpUva8">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Tejera Berón María Carolina</div>
+          <div class="cliente-datos">Guardia Oriental 3108</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/q433eBnRAQmYWYss7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Patricia Hernández Pérez</div>
+          <div class="cliente-datos">Gral. Flores 2987</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/BmZBHMjLPsHc1fuT7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Pontinvrea S.R.L. (ANCAP)</div>
+          <div class="cliente-datos">Gral. Flores 3090</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/kMK2CgAfTqt1vUjN6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Altamirano S.R.L.</div>
+          <div class="cliente-datos">Gral. Flores 3342</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/bgbh1CgyPLHchLTB7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Altamirano S.R.L.</div>
+          <div class="cliente-datos">Luis A. de Herrera 3444</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/yAdjGPjrhYpCdDxV7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Machado Faguada, Nadia Solange</div>
+          <div class="cliente-datos">José Battle y Ordóñez 3856</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/FSrBxzxni9CSsdYi7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Gasdia Cedres, Carlos Enrique</div>
+          <div class="cliente-datos">José Revuelta 3488</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/fe1fbcZkY25pE5pGA">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Autoservice La Familia</div>
+          <div class="cliente-datos">Leon Pérez 3549</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/kmDATjFCtehK1sxP6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Albana SRL</div>
+          <div class="cliente-datos">Juan Rosas 4355</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/6Au5jy4annvNZJfY7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Mavajo Ltda. (Granja Cerri)</div>
+          <div class="cliente-datos">San Martín 3717</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/cFh8MwEqKKc6J9eT9">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Rivera Max S.R.L.</div>
+          <div class="cliente-datos">José Battle y Ordóñez 4750</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/rLi6Rerqxg9JRQdZ7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Torres Esteban Diego Miguel</div>
+          <div class="cliente-datos">José Battle y Ordóñez 4802</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/mG5LZEgJ9Uj7dB6o9">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Granja Florida</div>
+          <div class="cliente-datos">Avda. J. Battle y Ordoñez 4815</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/nM1gg4iGduiBBBDL6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Forestiero y Forestiero</div>
+          <div class="cliente-datos">Atahona 3777</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/j6N6Me4xTnSn6LTX6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">La Compostelana</div>
+          <div class="cliente-datos">Avda. J. Battle y Ordoñez 5309</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/ox1ACVJAy3K213id6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Unión Americana</div>
+          <div class="cliente-datos">San Martín 4223</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/Jm9E41iu6S2hHFW57">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">A y P Mascari (El Trébol)</div>
+          <div class="cliente-datos">Burgues 3549</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/aP4wN7oxMLtui7F86">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Rodríguez Ávila, Pablo Sebastián</div>
+          <div class="cliente-datos">Burgues 3302</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/uj5N5k6zTn71pLQm9">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Arrieta Sanguinet</div>
+          <div class="cliente-datos">Suárez 3599</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/FVKyAgYnuZGb2ccRA">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="Miercoles">
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Eduardo Roland (Autoservice Roland)</div>
+          <div class="cliente-datos">Juan Rosas 4410</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/8kunD3QnHm8LgXn8A">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Fernando Alistegui</div>
+          <div class="cliente-datos">Martín Rodríguez 4306</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/yhRLdQq3srrnzntd6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Niyau S.R.L.</div>
+          <div class="cliente-datos">Máximo Gómez 1584</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/ztSicrtyk4cZ8NXDA">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Verdera e Hijos S.R.L. (ANCAP)</div>
+          <div class="cliente-datos">Avda. Millán 3771</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/wdKiu4e8RDw2zhpH6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Héctor y Luis Repetto</div>
+          <div class="cliente-datos">Juan María Gutierrez 3700</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/n4Wys1b1VnrbuC2x6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Kampante S.R.L.</div>
+          <div class="cliente-datos">Uruguayana 3490</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/XHKuwCkqNsYivTSy5">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">De Soto Santiago</div>
+          <div class="cliente-datos">Avda. Agraciada 3054</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/bHdcvUujh3eWWeqR9">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Budal S.R.L.</div>
+          <div class="cliente-datos">Avda. Millán 3010</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/TwX5ikjHDZ3Tiq3r8">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Autoservice Santa Fe</div>
+          <div class="cliente-datos">Avda. Millán 2951</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/2DUGwa4RwexJKzFt5">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">La Rúcula S.R.L.</div>
+          <div class="cliente-datos">Avda. Millán 2770</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/daNk5qDxNTqGxFsY8">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Cafitur S.A. (Exp 2)</div>
+          <div class="cliente-datos">Avda. Millán 2683</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/wwGE6XXPqUa3mjEZ9">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Enfa S.R.L.</div>
+          <div class="cliente-datos">Gral. Flores 2800</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/eKyxcJkT9rmb5Wbf6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Puerta del Sol Ltda.</div>
+          <div class="cliente-datos">Gral. Flores 2607</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/2GA8DVZRA6nWUvGA6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">María Victoria Fernández</div>
+          <div class="cliente-datos">Arenal Grande 2358</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/P8ePjNa6L6nBrnc29">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Lamore S.A.</div>
+          <div class="cliente-datos">Garibaldi 2064</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/kWqaKijLUzgDTapd7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Gonzálo de Requena S.R.L.</div>
+          <div class="cliente-datos">Garibaldi 2148</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="Bis https://goo.gl/maps/jJUCrxyjAUqzGGMJ7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">La Elegancia S.R.L.</div>
+          <div class="cliente-datos">Garibaldi 2182</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/bF5qGrda3BUxVpxc9">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Álvarez y Soto</div>
+          <div class="cliente-datos">Domingo Aramburú 2051</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/z7CjQyFmPLYRnWcJ9">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Julio Aplanalp</div>
+          <div class="cliente-datos">Martín García 2222</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/2haGCk8U5Peaogqh6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Álvaro González</div>
+          <div class="cliente-datos">Garibaldi 2400</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/gEhaTc4GHJjC8pdV8">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Nestor Galván</div>
+          <div class="cliente-datos">Garibaldi 2581</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/tWhrfHDQ5qq2vVvu6">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Lorenzo Rosales, Fernando Agustín</div>
+          <div class="cliente-datos">Br. Artigas 2348</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/m8SbAAgY6619JsAe7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Fleitas Valcada Lizet Viviana</div>
+          <div class="cliente-datos">Carlos Anaya 2751</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/qFQV6Ctk1LV3ZdqM9">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Mónica Sena</div>
+          <div class="cliente-datos">Carlos Anaya 2799</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/j9SVih5DeaHZCUAx7">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Adriana Pradi</div>
+          <div class="cliente-datos">Mariano Moreno 2349</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/H6jHzuLRgztd3rj26">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Carlos Suarez</div>
+          <div class="cliente-datos">Colorado 2319</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/enc6aDWinyBmLFj86">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Rosana Menini</div>
+          <div class="cliente-datos">Cufré 2800</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/LT9poeCy2ChTGSy17">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Rondini Ltda.</div>
+          <div class="cliente-datos">Rodríguez Larreta 2789</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/z2c4Bp1LWEtvVjzM8">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Santos Dal Broi Romina</div>
+          <div class="cliente-datos">Canstatt 3196</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/K3aLmfM8z1QfKk879">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="Jueves">
 
 <div class="caja">
   <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Rio Miño</div>
-    <div class="cliente-datos">8 de octubre</div>
+    <div class="cliente-nombre">Ussel S.A.</div>
+    <div class="cliente-datos">Bvar. Artigas 3750</div>
   </div>
   <div class="ubicacion">
-    <a target="_blank" href="3313 https://goo.gl/maps/6vkB93TA482r6nAX6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Fabegold</div>
-    <div class="cliente-datos">8 de octubre 3090</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/PP3XYvBuvpCsVHkAA">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Megamax S.A.</div>
-    <div class="cliente-datos">8 de octubre 3019</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/qxYuRAEUzq3vwgGE6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Enfa S.R.L.</div>
-    <div class="cliente-datos">Luis A. de Herrera 2635</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/F9jCYUPP8YPj2fWQA">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Mosende S.A.</div>
-    <div class="cliente-datos">Luis A. de Herrera 2254</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/KTzyApCroBhDqNpk6">
+    <a target="_blank" href="https://goo.gl/maps/KiZzQrts1EvvevUo8">
       <img src="./img/ubi.svg" />
     </a>
   </div>
@@ -124,7 +1218,7 @@
     <div class="cliente-datos">Cardal 3209</div>
   </div>
   <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/Zoy29B9d4T8t4EESA">
+    <a target="_blank" href="https://goo.gl/maps/XuypvAU5cNGNe8SC7">
       <img src="./img/ubi.svg" />
     </a>
   </div>
@@ -132,311 +1226,11 @@
 
 <div class="caja">
   <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Maresca SRL</div>
-    <div class="cliente-datos">Francisco Simón 2148</div>
+    <div class="cliente-nombre">Fabegold S.A.</div>
+    <div class="cliente-datos">8 de octubre 3090</div>
   </div>
   <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/yKoYAVFGPV8Zmfys6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Mauro Hernández</div>
-    <div class="cliente-datos">República Dominicana 2950</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/H73xbyfdcorwAMVG8">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Bowerey S.A.</div>
-    <div class="cliente-datos">Estero Belaco 2846</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/fLJpzXgYHcctJkcj6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Suárez Díaz G. y Umpierrez Baracoch</div>
-    <div class="cliente-datos">Monte Caseros 2590</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/2r49JdwB7LVk6TKp7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Fabián Berti</div>
-    <div class="cliente-datos">Monte Caseros 2584</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/uyxJjc4yTYwV7kyv6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Del Absto SRL</div>
-    <div class="cliente-datos">Martín Fierro 2579</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/XHB5YL251kvjArfN6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Forte Adige SA</div>
-    <div class="cliente-datos">Quijote 2499</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/WBbCHi736xK3fmPn9">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Zaifed</div>
-    <div class="cliente-datos">Caraguatay 2258</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/VmRxstYNru5jd79a8">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Graciela y José Meijón</div>
-    <div class="cliente-datos">Luis A. de Herrera 3117</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/QWnmRvBrj8MSniAE9">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Altamirano SRL</div>
-    <div class="cliente-datos">Altamirano 3246</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/1gEuKhUX26WNFH9D7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Rodríguez Enrique</div>
-    <div class="cliente-datos">Democracia 2496</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/cEKuqjGmEY44wGyB9">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Rivera Max S.R.L.</div>
-    <div class="cliente-datos">Isidoro de María 3055</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/eEiWND8mEe7saHaNA">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Fundación Parque Vacaciones UTE</div>
-    <div class="cliente-datos">Paraguay 2431 Piso 1</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/BMG7c1JDH8axqbR8A">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Acronar S.A.</div>
-    <div class="cliente-datos">Avda. Agraciada 2704</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/2AwuSKLmHkW765mSA">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Machitos S.R.L.</div>
-    <div class="cliente-datos">Zapicán 2549</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/hsFubvv8L16kxibs8">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Misurol S.A.</div>
-    <div class="cliente-datos">Baltasar Brum 2746</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/nJa8xVXmzoL3Y5pi8">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Tillenture S.A.</div>
-    <div class="cliente-datos">Baltazar Brum 3038</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/paBHyxbw31fxj9GQ6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Sebastián Machado</div>
-    <div class="cliente-datos">Progreso 949</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/GiHWkqtuC8rfspNm6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Porrati Fernández Stella Anahír</div>
-    <div class="cliente-datos">Agraciada 3055</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/tyNK8FXaxW2Zb6YT9">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Alvaréz Andrea</div>
-    <div class="cliente-datos">Grito de Asencio 1171</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/qru1Pm2boRRFDpLKA">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Ussel 511882</div>
-    <div class="cliente-datos">Bvar. Artigas 3750</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/qjrNgAxwAFEXiXsD9">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Bilwald S.A.</div>
-    <div class="cliente-datos">Millán 3294</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/6s1MecMphPFdmhs6A">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Desafío M y M</div>
-    <div class="cliente-datos">Luis A. de Herrera 4008</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/XpyKcA5xm6GNxNED6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">El Tata</div>
-    <div class="cliente-datos">Atahona 3607</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/AhQLzjXPUarjWgp76">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Rianjo Ltda</div>
-    <div class="cliente-datos">Rancagua 4070</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/o28GZENwSu6PFack8">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Aguiar y Ángelo</div>
-    <div class="cliente-datos">Guillermo Rodríquez 4752</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/arKyM1Jmk3KDEGmR9">
+    <a target="_blank" href="https://goo.gl/maps/hsTHPKs9r1U8GRHG7">
       <img src="./img/ubi.svg" />
     </a>
   </div>
@@ -448,7 +1242,271 @@
     <div class="cliente-datos">Ricardo Makinnon 5065</div>
   </div>
   <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/pKGPgJTfs7MAYjdL7">
+    <a target="_blank" href="https://goo.gl/maps/HeE5eHohjMv2KeiV6">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Altamirano S.R.L.</div>
+    <div class="cliente-datos">Altamirano 3246</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/aVPxaKMWHHxTrf5y7">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Enfa S.R.L.</div>
+    <div class="cliente-datos">Luis A. de Herrera 2635</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/MxWFjFb9gLZD4Cip6">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Mauro Hernández</div>
+    <div class="cliente-datos">República Dominicana 2950</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/hBZuM51NgRxGg3sUA">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Bowerey S.A.</div>
+    <div class="cliente-datos">Estero Bellaco 2846</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/uLUmaBCVE1MdXfwy6">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Acronar S.A.</div>
+    <div class="cliente-datos">Av. Agraciada 2704</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/wmjmV8iRpvBV2YAZ7">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Machitos S.R.L.</div>
+    <div class="cliente-datos">Zapicán 2549</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/KYaKYvSjUm9MJqTK8">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Del Abasto S.R.L.</div>
+    <div class="cliente-datos">Martín Fierro 2579</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/SdcQ79CeUopVDfMe7">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Rodríguez Enrique</div>
+    <div class="cliente-datos">Democracia 2496</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/Q7zs1rveqtSHmPc96">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Maresca S.R.L.</div>
+    <div class="cliente-datos">Francisco Simón 2148</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/sKrJKq3Ev8bGuAhg9">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Megamax S.A.</div>
+    <div class="cliente-datos">8 de octubre 3019</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/VSs9SzASq7bmsnac8">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Desafío M y M S.R.L.</div>
+    <div class="cliente-datos">Luis A. de Herrera 4008</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/3wDnR3b9ePVLexff6">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Aguiar y Ángelo</div>
+    <div class="cliente-datos">Guillermo Rodríguez 4752</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/7eYohveVcNJsNU7x9">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Forte Adige S.A.</div>
+    <div class="cliente-datos">Quijote 2499</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/X6kHRWmTP82dzS8Z6">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Graciela y José Meijón Ltda.</div>
+    <div class="cliente-datos">Luis A. de Herrera 3117</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/GjuY3trcL2waauBP6">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Bilwald S.A.</div>
+    <div class="cliente-datos">Av. Millán 3294</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/SJEWr3HU23xDgAEQ7">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Rianjo Ltda.</div>
+    <div class="cliente-datos">Rancagua 4070</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/NFB1mBTcsoQfNqHE8">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Río Miño Ltda.</div>
+    <div class="cliente-datos">8 de octubre 3313</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/jdLJbzLsp978sW1J7">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Ferreira Rodríguez Laura Mariela</div>
+    <div class="cliente-datos">Possolo 3933</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/eW5NHSQZLzG6Dy4z6">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Suarez Díaz G. y Umpierrez Baracoch</div>
+    <div class="cliente-datos">Monte Caseros 2590</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/hPFMHdS3iU7vYQaz7">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">El Tata</div>
+    <div class="cliente-datos">Arahona 3607</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/4ExsZFNEWty6fE3q9">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Pastorino Ltda.</div>
+    <div class="cliente-datos">Av. José Battle y Ordóñez 2840</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/9BRCmiaytBULj1QK8">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Zaifed</div>
+    <div class="cliente-datos">Caraguatay 2258</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/JE1kNpKoFRy1XCqCA">
       <img src="./img/ubi.svg" />
     </a>
   </div>
@@ -460,16 +1518,64 @@
     <div class="cliente-datos">Bernabé Michelena 4707</div>
   </div>
   <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/KFe9D5q2iqjM1ai69">
+    <a target="_blank" href="https://goo.gl/maps/T6yAGDwc9JrFhMqi8">
       <img src="./img/ubi.svg" />
     </a>
   </div>
 </div>
 
- <div class="caja">
-   <div class="cliente" onClick="(Eliminar(this))">
-     <div class="cliente-nombre">Ferreira Rodríguez Laura Mariela</div>
-     <div class="cliente-datos">Pozzolo 3933 (¡No aparece en el mapa!)</div>
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Fundación Parque vacaciones UTE-ANT</div>
+    <div class="cliente-datos">Paraguay 2431</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="Piso 1 https://goo.gl/maps/H55W923ukKVCRUhu6">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Fabian Berti</div>
+    <div class="cliente-datos">Monte Caseros 2584 Bis</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/Upd7qJECZaNusazYA">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Mosende S.A.</div>
+    <div class="cliente-datos">Luis A. de Herrera 2254</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/cT1bRKuL9CGcGXkr9">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Rivera Max S.R.L.</div>
+    <div class="cliente-datos">Isidoro de María 1326</div>
+  </div>
+  <div class="ubicacion">
+    <a target="_blank" href="https://goo.gl/maps/txN3gZRNrtx2ySB7A">
+      <img src="./img/ubi.svg" />
+    </a>
+  </div>
+</div>
+
+<div class="caja">
+  <div class="cliente" onClick="(Eliminar(this))">
+    <div class="cliente-nombre">Cipag</div>
+    <div class="cliente-datos">No data</div>
   </div>
   <div class="ubicacion">
     <a target="_blank" href="">
@@ -477,146 +1583,11 @@
     </a>
   </div>
 </div>
-        </section>
-
-        <section id="Martes">
 
 <div class="caja">
   <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Los Ángeles</div>
-    <div class="cliente-datos">Luis A. Herrera 2251</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/YueS7Y3pokAbWjuM8">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Luciana Sosa Dobal</div>
-    <div class="cliente-datos">Luis A. de Herrera 2275</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/gTyms6HChrBtNZDS8">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Coop. de las Fuerzas Armadas - COFAS</div>
-    <div class="cliente-datos">Hosp. Militar</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/iRtm4gebs6cPhhyX7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Asociación Cooperativa Electoral</div>
-    <div class="cliente-datos">8 de octubre 2897</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/m19qHDUjcYExrKEV7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Natalia García</div>
-    <div class="cliente-datos">Carlos Anaya 2839</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/bRqtPCT4wGTGv4d99">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Santiago Vargas</div>
-    <div class="cliente-datos">Nueva Palmira 1952</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/3jp2BGGpX4T3bMFF8">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Araujo Rebollo Silvia y Ramos Go</div>
-    <div class="cliente-datos">San Martín 2240</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/PyME5TUj5Du1ZVQYA">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Sucesores Horacio Cremona</div>
-    <div class="cliente-datos">Agraciada 2346</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/97bq3wDyCN9FKmwMA">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Daniel Corbo</div>
-    <div class="cliente-datos">Colombia 1203</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/GaF2kNTFaoPbf4y26">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Rondeau Ltda.</div>
-    <div class="cliente-datos">Rondeau 2109</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/vuypk2KvgAvubLHKA">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Fundación Parque Vacaciones UTE</div>
-    <div class="cliente-datos">Guatemala 1076</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/amdri43EdrBNTGoB7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Alvarez Da Rosa, Andrea Isabel</div>
-    <div class="cliente-datos">General Luna 1299</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/JhBYpHjY4kJvt4Zw6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Maria G. Domínguez (Mar y Sol Marke</div>
-    <div class="cliente-datos">Agraciada 2795</div>
+    <div class="cliente-nombre">Rosanna Yannet Burgueño</div>
+    <div class="cliente-datos">No data</div>
   </div>
   <div class="ubicacion">
     <a target="_blank" href="">
@@ -624,1944 +1595,1023 @@
     </a>
   </div>
 </div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Luna S.R.L. (ANCAP)</div>
-    <div class="cliente-datos">Bvar. Artigas 3785</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/D63aSDw6qTRdpUva8">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Tejera Berón María Carolina</div>
-    <div class="cliente-datos">Guardia Oriental 3108</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/q433eBnRAQmYWYss7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Patricia Hernández Pérez</div>
-    <div class="cliente-datos">Gral. Flores 2987</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/BmZBHMjLPsHc1fuT7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Pontinvrea S.R.L. (ANCAP)</div>
-    <div class="cliente-datos">Gral. Flores 3090</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/kMK2CgAfTqt1vUjN6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Altamirano S.R.L.</div>
-    <div class="cliente-datos">Gral. Flores 3342</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/bgbh1CgyPLHchLTB7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Altamirano S.R.L.</div>
-    <div class="cliente-datos">Luis A. de Herrera 3444</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/yAdjGPjrhYpCdDxV7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Machado Faguada, Nadia Solange</div>
-    <div class="cliente-datos">José Battle y Ordóñez 3856</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/FSrBxzxni9CSsdYi7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Gasdia Cedres, Carlos Enrique</div>
-    <div class="cliente-datos">José Revuelta 3488</div>
-  </div>
-<div class="ubicacion">
-  <a target="_blank" href="https://goo.gl/maps/fe1fbcZkY25pE5pGA">
-    <img src="./img/ubi.svg" />
-  </a>
-</div></div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Autoservice La Familia</div>
-    <div class="cliente-datos">Leon Pérez 3549</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/kmDATjFCtehK1sxP6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Albana SRL</div>
-    <div class="cliente-datos">Juan Rosas 4355</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/6Au5jy4annvNZJfY7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Mavajo Ltda. (Granja Cerri)</div>
-    <div class="cliente-datos">San Martín 3717</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/cFh8MwEqKKc6J9eT9">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Rivera Max S.R.L.</div>
-    <div class="cliente-datos">José Battle y Ordóñez 4750</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/rLi6Rerqxg9JRQdZ7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Torres Esteban Diego Miguel</div>
-    <div class="cliente-datos">José Battle y Ordóñez 4802</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/mG5LZEgJ9Uj7dB6o9">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Granja Florida</div>
-    <div class="cliente-datos">Avda. J. Battle y Ordoñez 4815</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/nM1gg4iGduiBBBDL6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Forestiero y Forestiero</div>
-    <div class="cliente-datos">Atahona 3777</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/j6N6Me4xTnSn6LTX6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">La Compostelana</div>
-    <div class="cliente-datos">Avda. J. Battle y Ordoñez 5309</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/ox1ACVJAy3K213id6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Unión Americana</div>
-    <div class="cliente-datos">San Martín 4223</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/Jm9E41iu6S2hHFW57">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">A y P Mascari (El Trébol)</div>
-    <div class="cliente-datos">Burgues 3549</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/aP4wN7oxMLtui7F86">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Rodríguez Ávila, Pablo Sebastián</div>
-    <div class="cliente-datos">Burgues 3302</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/uj5N5k6zTn71pLQm9">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Arrieta Sanguinet</div>
-    <div class="cliente-datos">Suárez 3599</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/FVKyAgYnuZGb2ccRA">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-        </section>
-
-        <section id="Miercoles">
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Eduardo Roland (Autoservice Roland)</div>
-    <div class="cliente-datos">Juan Rosas 4410</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/8kunD3QnHm8LgXn8A">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Fernando Alistegui</div>
-    <div class="cliente-datos">Martín Rodríguez 4306</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/yhRLdQq3srrnzntd6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Niyau S.R.L.</div>
-    <div class="cliente-datos">Máximo Gómez 1584</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/ztSicrtyk4cZ8NXDA">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Verdera e Hijos S.R.L. (ANCAP)</div>
-    <div class="cliente-datos">Avda. Millán 3771</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/wdKiu4e8RDw2zhpH6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Héctor y Luis Repetto</div>
-    <div class="cliente-datos">Juan María Gutierrez 3700</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/n4Wys1b1VnrbuC2x6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Kampante S.R.L.</div>
-    <div class="cliente-datos">Uruguayana 3490</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/XHKuwCkqNsYivTSy5">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">De Soto Santiago</div>
-    <div class="cliente-datos">Avda. Agraciada 3054</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/bHdcvUujh3eWWeqR9">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Budal S.R.L.</div>
-    <div class="cliente-datos">Avda. Millán 3010</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/TwX5ikjHDZ3Tiq3r8">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Autoservice Santa Fe</div>
-    <div class="cliente-datos">Avda. Millán 2951</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/2DUGwa4RwexJKzFt5">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">La Rúcula S.R.L.</div>
-    <div class="cliente-datos">Avda. Millán 2770</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/daNk5qDxNTqGxFsY8">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Cafitur S.A. (Exp 2)</div>
-    <div class="cliente-datos">Avda. Millán 2683</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/wwGE6XXPqUa3mjEZ9">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Enfa S.R.L.</div>
-    <div class="cliente-datos">Gral. Flores 2800</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/eKyxcJkT9rmb5Wbf6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Puerta del Sol Ltda.</div>
-    <div class="cliente-datos">Gral. Flores 2607</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/2GA8DVZRA6nWUvGA6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">María Victoria Fernández</div>
-    <div class="cliente-datos">Arenal Grande 2358</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/P8ePjNa6L6nBrnc29">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Lamore S.A.</div>
-    <div class="cliente-datos">Garibaldi 2064</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/kWqaKijLUzgDTapd7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Gonzálo de Requena S.R.L.</div>
-    <div class="cliente-datos">Garibaldi 2148</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="Bis https://goo.gl/maps/jJUCrxyjAUqzGGMJ7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">La Elegancia S.R.L.</div>
-    <div class="cliente-datos">Garibaldi 2182</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/bF5qGrda3BUxVpxc9">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Álvarez y Soto</div>
-    <div class="cliente-datos">Domingo Aramburú 2051</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/z7CjQyFmPLYRnWcJ9">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Julio Aplanalp</div>
-    <div class="cliente-datos">Martín García 2222</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/2haGCk8U5Peaogqh6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Álvaro González</div>
-    <div class="cliente-datos">Garibaldi 2400</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/gEhaTc4GHJjC8pdV8">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Nestor Galván</div>
-    <div class="cliente-datos">Garibaldi 2581</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/tWhrfHDQ5qq2vVvu6">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Lorenzo Rosales, Fernando Agustín</div>
-    <div class="cliente-datos">Br. Artigas 2348</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/m8SbAAgY6619JsAe7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Fleitas Valcada Lizet Viviana</div>
-    <div class="cliente-datos">Carlos Anaya 2751</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/qFQV6Ctk1LV3ZdqM9">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Mónica Sena</div>
-    <div class="cliente-datos">Carlos Anaya 2799</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/j9SVih5DeaHZCUAx7">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Adriana Pradi</div>
-    <div class="cliente-datos">Mariano Moreno 2349</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/H6jHzuLRgztd3rj26">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Carlos Suarez</div>
-    <div class="cliente-datos">Colorado 2319</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/enc6aDWinyBmLFj86">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Rosana Menini</div>
-    <div class="cliente-datos">Cufré 2800</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/LT9poeCy2ChTGSy17">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Rondini Ltda.</div>
-    <div class="cliente-datos">Rodríguez Larreta 2789</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/z2c4Bp1LWEtvVjzM8">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-
-<div class="caja">
-  <div class="cliente" onClick="(Eliminar(this))">
-    <div class="cliente-nombre">Santos Dal Broi Romina</div>
-    <div class="cliente-datos">Canstatt 3196</div>
-  </div>
-  <div class="ubicacion">
-    <a target="_blank" href="https://goo.gl/maps/K3aLmfM8z1QfKk879">
-      <img src="./img/ubi.svg" />
-    </a>
-  </div>
-</div>
-        </section>
-
-        <section id="Jueves">
-
-            <!-- <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Keneltur S.A.</div>
-                    <div class="cliente-datos">Reponer</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/CAASZs8pXv52">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div> -->
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Demel S.A.</div>
-                    <div class="cliente-datos">Excel | Monto</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/3vTEPWEDuom">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Panadería La Gran Flauta</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/PGRWhKWwFJ72">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Federico Rariz</div>
-                    <div class="cliente-datos">13:30 | Monto</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/nnkqEEgvwuz">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Jorge Larrosa</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/NnFW3ZMsLuz">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Belroap</div>
-                    <div class="cliente-datos">14:00 | Monto</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/KTKSWCwvPHu">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Olga González</div>
-                    <div class="cliente-datos">14:00 | Monto</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/r7aq3rbZco52">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Teriban S.A.</div>
-                    <div class="cliente-datos">15:00</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/qnMz3WbSfKs">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Mario Arbelo</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/aJz6LoFBUy52">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Nilvia Rivero</div>
-                    <div class="cliente-datos">Hace pedido | Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/QYXcMdWQgp62">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Tonicor</div>
-                    <div class="cliente-datos">13:00 | Hace pedido</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/kqT9GqUNCdM2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Goñi Hnos. Ltda.</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/3irDo6HffBC2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre quincenal">Kanta</div>
-                    <div class="cliente-datos">13:00 | Hace pedido | Quincenal</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Erize S.A.</div>
-                    <div class="cliente-datos">desde 14:00 a 18:00</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/Hq9cysdsU5y94B8r8">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Elizabet Call</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/CW9TQS6oyyB2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre quincenal">Edgar Pena</div>
-                    <div class="cliente-datos">13:00 | Hace pedido | Quincenal</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/XK9GqhxJnCS2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre quicenal">Hagop Cemerlian</div>
-                    <div class="cliente-datos">14:00 | Hace pedido | Quincenal</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/7xDYNBppFHq">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Omar López</div>
-                    <div class="cliente-datos">Monto</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/AJPhQpwgjt42">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Pumeda Ltda.</div>
-                    <div class="cliente-datos">Hace pedido</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/gepYNQHew3M2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Mera y Mera</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/4fdQCT4RZoK2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Ares Rodríguez, Ricardo</div>
-                    <div class="cliente-datos">Hace pedido</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Fruniland S.A.</div>
-                    <div class="cliente-datos">Monto</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Gatica Sabech R - Tomaino Corbo S.</div>
-                    <div class="cliente-datos">Monto</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre quincenal">Rossi Isabel</div>
-                    <div class="cliente-datos">Hace pedido</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/2N96vA1ZEQ62">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Parado y Fleitas</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/rtRD6SKd6Uz">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Manzanar Gil, Rosana</div>
-                    <div class="cliente-datos">Hace pedido | Monto</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/rtRD6SKd6Uz">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Mercado de ahorro S.R.L.</div>
-                    <div class="cliente-datos">Monto</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Palticor S.A.</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/6tP2MzLEnC42">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Ussel S.A.</div>
-                    <div class="cliente-datos">Reponer</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/3dchpW9SPRB2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-        </section>
-
-        <section id="Viernes">
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Keneltur S.A.</div>
-                    <div class="cliente-datos">14:00</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/CAASZs8pXv52">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">El Sordo Fernández Ltda.</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/P9oVQiMbavn">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Acelana S.A.</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/P9oVQiMbavn">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">La Fama S.R.L.</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/zz5nNHexSwM2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Le Majestic S.A.</div>
-                    <div class="cliente-datos">15:00 | Hace pedido.</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/qVmXCBht58H2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Ana Romaniello</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/9LLxY7CqG2s">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Stella Prais</div>
-                    <div class="cliente-datos">Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/jM9JuCg4GqL2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Ma-Fe</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/xAM5s2gNVMH2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Eugenia García</div>
-                    <div class="cliente-datos">Hace pedido | Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/Up35bkdihbS2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">María Ana Rodríguez</div>
-                    <div class="cliente-datos">Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/hoaecy2FyiG2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Cristina Raimondi</div>
-                    <div class="cliente-datos">14:00 | Hace pedido | Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/GAcZgmH2GoN2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre quincenal">Mónica Ortíz</div>
-                    <div class="cliente-datos">14:00 | Quincenal | Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Stella Maris</div>
-                    <div class="cliente-datos">14:00 | Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/GAcZgmH2GoN2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Sonia Garay</div>
-                    <div class="cliente-datos">Hace pedido | Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/J9zXSk99PRx">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Patricia Silva</div>
-                    <div class="cliente-datos">14:00 | Hace pedido | Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/e1TNMnC57i52">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre quincenal">Grunullu y Grunullu</div>
-                    <div class="cliente-datos">Quincenal | Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/V5Qntp1GBgB2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Gabi Maxi S.R.L.</div>
-                    <div class="cliente-datos">Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/XBfLDeENzCy">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Gamaris Ltda.</div>
-                    <div class="cliente-datos">Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/LzNJkB3y8c92">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Kikisi S.R.L.</div>
-                    <div class="cliente-datos">Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Michael Monzón</div>
-                    <div class="cliente-datos">Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Lucas A. Prado Díaz</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/tKXJv2pTotE2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Claudia Capo</div>
-                    <div class="cliente-datos">Hace pedido | Monto</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/mKpXw3LYKqk">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">La Mundial S.R.L.</div>
-                    <div class="cliente-datos">Hace pedido</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/tMuXYu3a4Sv">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Gonzalo Avelenda</div>
-                    <div class="cliente-datos">Hace pedido | Abre 10:00 | Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/AkUkvMNsujk">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Súper La Mundial S.R.L.</div>
-                    <div class="cliente-datos">Monto</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/kygrNCcbww32">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Soditur S.A.</div>
-                    <div class="cliente-datos">Pedido con encargada</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/YxbwnqeZUU32">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Laduche Gardiol, Ricardo</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/d2z9kLyvrHM2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Baltimar S.A.</div>
-                    <div class="cliente-datos">desde 13:30 a 15:00 | Hace pedido</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/DyH1zgxiptm">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Alencur S.A.</div>
-                    <div class="cliente-datos">Para lunes</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/4ZS29jqH4B82">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Barbiyola S.R.L.</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/SLHMNXVEVzC2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Famintal S.A.</div>
-                    <div class="cliente-datos">Monto</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/LFQgXiT8qEB2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-        </section>
-
-        <section id="Sabado">
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre quincenal">Keneltur S.A.</div>
-                    <div class="cliente-datos">Reponer</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/CAASZs8pXv52">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Ussel S.A.</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/3dchpW9SPRB2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre quincenal">Obacor S.A.</div>
-                    <div class="cliente-datos">Quincenal</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/rwF6j3PLqqK2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre quincenal">Ly S.R.L.</div>
-                    <div class="cliente-datos">Monto | Quincenal</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/YG2kqqbuRq82">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Bidenux S.A.</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/EuaUDbSFZKAfYLPA8">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Palticor S.A.</div>
-                    <div class="cliente-datos">Hacer pedido</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/6tP2MzLEnC42">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Inashy S.A.</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/jLjazdJeTTG2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre quincenal">Sole</div>
-                    <div class="cliente-datos">Monto | Quincenal</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/4UF6PWaJ7wt">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Goñi Hnos. Ltda.</div>
-                    <div class="cliente-datos">&#160;</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/3irDo6HffBC2">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="caja">
-                <div class="cliente" onClick="(Eliminar(this))">
-                    <div class="cliente-nombre">Erize S.A.</div>
-                    <div class="cliente-datos">de 14 a 18</div>
-                </div>
-                <div class="ubicacion">
-                    <a target="_blank" href="https://goo.gl/maps/ijVfGxC3CNFPzQcY9">
-                        <img src="./img/ubi.svg" />
-                    </a>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Aquí está la ruta ordenada alfabéticamente. -->
-        <section id="ABLunes">
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Almacén La Familia</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Baltimar S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Barragan Donnangelo, Víctor</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Carol Muñíz</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Doña Pancha</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Eduardo Álvarez</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Federico Rariz</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Gastronomía Del Sur</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Gimeno Bellucci, Erika</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Jorge Larrosa</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Keneltur S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Le Majestic S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Leonardo Enrico</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Leonardo Negri</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Mario Arbelo</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Marne Ltda.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Mera y Mera</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Míguez Conde</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Nelson</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Panadería Gran Flauta</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Parado y Fleitas</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Romero</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Soledad Vasquez</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Teriban S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Viviana Netto</div>
-            </div>
-        </section>
-
-        <section id="ABMartes">
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Acelana S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Alejandro Cabrera</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Ana Romaniello</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Andrea Azzolini</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Baiona Cedres, Hugo</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Barbiyola S.R.L.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">El Sordo Fernández</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Enrique Valenzuela</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Erize S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Famintal S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Goñi Hnos. S.R.L.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">La Fama S.R.L.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Ma-Fe</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Maciel Lemos, Gonzálo</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">María Soledad Muíño</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Mónica Pérez</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Nelson Romero</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Palticor S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Panifor S.A. (I)</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Panifor S.A. (II)</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Pérez Muñecas, Carolina</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Ronylend S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Sebastián Mastracucci</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Silvia Álvarez</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Silvia Caetano</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Soditur S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Súper La Mundial S.R.L.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Susana Panosain</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Tiki S.C.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Tonicor</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Walter Rosas</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Washinton González</div>
-            </div>
-        </section>
-
-        <section id="ABMiercoles">
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Alencur S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Almacén Laduche</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Altamirano S.R.L.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Ángel Alonso</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Baltimar S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Coop. Gastrocoop</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Cumbay Marta</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Daltiro S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Daniel Antonio Rodríguez</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Elizabeth Almeda</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Gabi Maxi S.R.L.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Gamaris Ltda.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Geribon Resquion</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Inashy S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Jesús Sosa</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Juan E. Ramos</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Keneltur S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Kimer S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Le Majestic S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Lorena Guerra</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Lourdes Larrosa</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">María Ana Rodríguez</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">María De Los Ángeles Furtado</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Marisa Camaño</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Martín Parodi</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Ottonello Gaimari Sebastián</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Pedro Moreno</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Pedro Szetucha</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Rialtur S.A. (C)</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Rialtur S.A. (E)</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Roberto Sinigoti</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">San Javier Ltda</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Stella Prais</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Ussel S.A.</div>
-            </div>
-        </section>
-
-        <section id="ABJueves">
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Almacén La Familia</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Belroap</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Demel S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Edgar Pena</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Elizabet Call</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Erize S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Federico Rariz</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Goñi Hnos. Ltda.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Hagop Cemerlian</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Jorge Larrosa</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Kanta S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Mario Arbelo</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Mauro y Enrique Valenzuela</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Mera y Mera</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Mercado del Ahorro Ltda.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Nelson</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Nilvia Rivero</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Olga González</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Omar López</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Palticor S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Panadería La Gran Flauta</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Parado y Fleitas</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Pumeda</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Rossi Isabel</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Teriban S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Tonicor</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Valentin Heguy</div>
-            </div>
-        </section>
-
-        <section id="ABViernes">
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Acelana S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Alencur S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Almacén Laduche</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Altamirano S.R.L.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Ana Romaniello</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Baltimar S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Barbiyola S.R.L.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Claudia Capo</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Coop. Gastrocoop</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Cristina Raimondi</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">El Sordo Fernández</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Eugenia García</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Famintal S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Gonzalo Avelenda</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Keneltur S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Kikisi S.R.L.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">La Fama S.R.L.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">La Mundial S.R.L.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">La Social Ltda.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Le Majestic S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Lucas A. Prado Díaz</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Ma-Fe</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">María Ana Rodríguez</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Michael Monzón</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Mónica Ortíz</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Olímpica 12 S.R.L.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Patricia Silva</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Pedro Szetucha</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Rialtur S.A. (C)</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Soditur S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Sonia Garay</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Stella Maris</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Stella Prais</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Súper La Mundial</div>
-            </div>
-        </section>
-
-        <section id="ABSabado">
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Erize S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Gabi Maxi S.R.L.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Gamaris Ltda.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Goñi Hnos. Ltda.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Grunullu y Grunullu</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Inashy S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Ly S.R.L.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Obacor S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Ottonello Gaimari Sebastián</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Palticor S.A.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Sole.</div>
-            </div>
-            <div>
-                <div class="cliente_abc" onClick="(Eliminar(this))">Ussel S.A.</div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Contador de clientes -->
-    <div class="clientes" id="contador"><span id="cli_quedan">25</span><span id="cli_tot">25</span></div>
+
+    </section>
+
+    <section id="Viernes">
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Keneltur S.A.</div>
+          <div class="cliente-datos">14:00</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/CAASZs8pXv52">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">El Sordo Fernández Ltda.</div>
+          <div class="cliente-datos">&#160;</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/P9oVQiMbavn">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Acelana S.A.</div>
+          <div class="cliente-datos">&#160;</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/P9oVQiMbavn">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">La Fama S.R.L.</div>
+          <div class="cliente-datos">&#160;</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/zz5nNHexSwM2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Le Majestic S.A.</div>
+          <div class="cliente-datos">15:00 | Hace pedido.</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/qVmXCBht58H2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Ana Romaniello</div>
+          <div class="cliente-datos">&#160;</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/9LLxY7CqG2s">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Stella Prais</div>
+          <div class="cliente-datos">Para lunes</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/jM9JuCg4GqL2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Ma-Fe</div>
+          <div class="cliente-datos">&#160;</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/xAM5s2gNVMH2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Eugenia García</div>
+          <div class="cliente-datos">Hace pedido | Para lunes</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/Up35bkdihbS2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">María Ana Rodríguez</div>
+          <div class="cliente-datos">Para lunes</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/hoaecy2FyiG2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Cristina Raimondi</div>
+          <div class="cliente-datos">14:00 | Hace pedido | Para lunes</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/GAcZgmH2GoN2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre quincenal">Mónica Ortíz</div>
+          <div class="cliente-datos">14:00 | Quincenal | Para lunes</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Stella Maris</div>
+          <div class="cliente-datos">14:00 | Para lunes</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/GAcZgmH2GoN2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Sonia Garay</div>
+          <div class="cliente-datos">Hace pedido | Para lunes</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/J9zXSk99PRx">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Patricia Silva</div>
+          <div class="cliente-datos">14:00 | Hace pedido | Para lunes</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/e1TNMnC57i52">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre quincenal">Grunullu y Grunullu</div>
+          <div class="cliente-datos">Quincenal | Para lunes</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/V5Qntp1GBgB2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Gabi Maxi S.R.L.</div>
+          <div class="cliente-datos">Para lunes</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/XBfLDeENzCy">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Gamaris Ltda.</div>
+          <div class="cliente-datos">Para lunes</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/LzNJkB3y8c92">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Kikisi S.R.L.</div>
+          <div class="cliente-datos">Para lunes</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Michael Monzón</div>
+          <div class="cliente-datos">Para lunes</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Lucas A. Prado Díaz</div>
+          <div class="cliente-datos">&#160;</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/tKXJv2pTotE2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Claudia Capo</div>
+          <div class="cliente-datos">Hace pedido | Monto</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/mKpXw3LYKqk">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">La Mundial S.R.L.</div>
+          <div class="cliente-datos">Hace pedido</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/tMuXYu3a4Sv">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Gonzalo Avelenda</div>
+          <div class="cliente-datos">Hace pedido | Abre 10:00 | Para lunes</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/AkUkvMNsujk">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Súper La Mundial S.R.L.</div>
+          <div class="cliente-datos">Monto</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/kygrNCcbww32">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Soditur S.A.</div>
+          <div class="cliente-datos">Pedido con encargada</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/YxbwnqeZUU32">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Laduche Gardiol, Ricardo</div>
+          <div class="cliente-datos">&#160;</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/d2z9kLyvrHM2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Baltimar S.A.</div>
+          <div class="cliente-datos">desde 13:30 a 15:00 | Hace pedido</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/DyH1zgxiptm">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Alencur S.A.</div>
+          <div class="cliente-datos">Para lunes</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/4ZS29jqH4B82">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Barbiyola S.R.L.</div>
+          <div class="cliente-datos">&#160;</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/SLHMNXVEVzC2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Famintal S.A.</div>
+          <div class="cliente-datos">Monto</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/LFQgXiT8qEB2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="Sabado">
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre quincenal">Keneltur S.A.</div>
+          <div class="cliente-datos">Reponer</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/CAASZs8pXv52">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Ussel S.A.</div>
+          <div class="cliente-datos">&#160;</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/3dchpW9SPRB2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre quincenal">Obacor S.A.</div>
+          <div class="cliente-datos">Quincenal</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/rwF6j3PLqqK2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre quincenal">Ly S.R.L.</div>
+          <div class="cliente-datos">Monto | Quincenal</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/YG2kqqbuRq82">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Bidenux S.A.</div>
+          <div class="cliente-datos">&#160;</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/EuaUDbSFZKAfYLPA8">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Palticor S.A.</div>
+          <div class="cliente-datos">Hacer pedido</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/6tP2MzLEnC42">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Inashy S.A.</div>
+          <div class="cliente-datos">&#160;</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/jLjazdJeTTG2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre quincenal">Sole</div>
+          <div class="cliente-datos">Monto | Quincenal</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/4UF6PWaJ7wt">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Goñi Hnos. Ltda.</div>
+          <div class="cliente-datos">&#160;</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/3irDo6HffBC2">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="cliente" onClick="(Eliminar(this))">
+          <div class="cliente-nombre">Erize S.A.</div>
+          <div class="cliente-datos">de 14 a 18</div>
+        </div>
+        <div class="ubicacion">
+          <a target="_blank" href="https://goo.gl/maps/ijVfGxC3CNFPzQcY9">
+            <img src="./img/ubi.svg" />
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Aquí está la ruta ordenada alfabéticamente. -->
+    <section id="ABLunes">
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))"></div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Baltimar S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Barragan Donnangelo, Víctor</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Carol Muñíz</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Doña Pancha</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Eduardo Álvarez</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Federico Rariz</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Gastronomía Del Sur</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Gimeno Bellucci, Erika</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Jorge Larrosa</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Keneltur S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Le Majestic S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Leonardo Enrico</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Leonardo Negri</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Mario Arbelo</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Marne Ltda.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Mera y Mera</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Míguez Conde</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Nelson</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Panadería Gran Flauta</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Parado y Fleitas</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Romero</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Soledad Vasquez</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Teriban S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Viviana Netto</div>
+      </div>
+    </section>
+
+    <section id="ABMartes">
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Acelana S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Alejandro Cabrera</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Ana Romaniello</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Andrea Azzolini</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Baiona Cedres, Hugo</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Barbiyola S.R.L.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">El Sordo Fernández</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Enrique Valenzuela</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Erize S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Famintal S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Goñi Hnos. S.R.L.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">La Fama S.R.L.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Ma-Fe</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Maciel Lemos, Gonzálo</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">María Soledad Muíño</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Mónica Pérez</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Nelson Romero</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Palticor S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Panifor S.A. (I)</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Panifor S.A. (II)</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Pérez Muñecas, Carolina</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Ronylend S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Sebastián Mastracucci</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Silvia Álvarez</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Silvia Caetano</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Soditur S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Súper La Mundial S.R.L.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Susana Panosain</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Tiki S.C.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Tonicor</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Walter Rosas</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Washinton González</div>
+      </div>
+    </section>
+
+    <section id="ABMiercoles">
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Alencur S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Almacén Laduche</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Altamirano S.R.L.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Ángel Alonso</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Baltimar S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Coop. Gastrocoop</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Cumbay Marta</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Daltiro S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Daniel Antonio Rodríguez</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Elizabeth Almeda</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Gabi Maxi S.R.L.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Gamaris Ltda.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Geribon Resquion</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Inashy S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Jesús Sosa</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Juan E. Ramos</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Keneltur S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Kimer S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Le Majestic S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Lorena Guerra</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Lourdes Larrosa</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">María Ana Rodríguez</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">María De Los Ángeles Furtado</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Marisa Camaño</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Martín Parodi</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Ottonello Gaimari Sebastián</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Pedro Moreno</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Pedro Szetucha</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Rialtur S.A. (C)</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Rialtur S.A. (E)</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Roberto Sinigoti</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">San Javier Ltda</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Stella Prais</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Ussel S.A.</div>
+      </div>
+    </section>
+
+    <section id="ABJueves">
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Almacén La Familia</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Belroap</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Demel S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Edgar Pena</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Elizabet Call</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Erize S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Federico Rariz</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Goñi Hnos. Ltda.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Hagop Cemerlian</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Jorge Larrosa</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Kanta S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Mario Arbelo</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Mauro y Enrique Valenzuela</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Mera y Mera</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Mercado del Ahorro Ltda.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Nelson</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Nilvia Rivero</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Olga González</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Omar López</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Palticor S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Panadería La Gran Flauta</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Parado y Fleitas</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Pumeda</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Rossi Isabel</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Teriban S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Tonicor</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Valentin Heguy</div>
+      </div>
+    </section>
+
+    <section id="ABViernes">
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Acelana S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Alencur S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Almacén Laduche</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Altamirano S.R.L.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Ana Romaniello</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Baltimar S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Barbiyola S.R.L.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Claudia Capo</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Coop. Gastrocoop</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Cristina Raimondi</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">El Sordo Fernández</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Eugenia García</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Famintal S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Gonzalo Avelenda</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Keneltur S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Kikisi S.R.L.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">La Fama S.R.L.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">La Mundial S.R.L.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">La Social Ltda.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Le Majestic S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Lucas A. Prado Díaz</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Ma-Fe</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">María Ana Rodríguez</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Michael Monzón</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Mónica Ortíz</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Olímpica 12 S.R.L.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Patricia Silva</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Pedro Szetucha</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Rialtur S.A. (C)</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Soditur S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Sonia Garay</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Stella Maris</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Stella Prais</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Súper La Mundial</div>
+      </div>
+    </section>
+
+    <section id="ABSabado">
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Erize S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Gabi Maxi S.R.L.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Gamaris Ltda.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Goñi Hnos. Ltda.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Grunullu y Grunullu</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Inashy S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Ly S.R.L.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Obacor S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Ottonello Gaimari Sebastián</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Palticor S.A.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Sole.</div>
+      </div>
+      <div>
+        <div class="cliente_abc" onClick="(Eliminar(this))">Ussel S.A.</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contador de clientes -->
+  <div class="clientes" id="contador"><span id="cli_quedan">25</span><span id="cli_tot">25</span></div>
 </body>
 
 </html>
