@@ -12,7 +12,6 @@ function display_none() { // Función que oculta todos los días.
   document.getElementById("ABMiercoles").style.display = "none";
   document.getElementById("ABJueves").style.display = "none";
   document.getElementById("ABViernes").style.display = "none";
-  document.getElementById("ABSabado").style.display = "none";
   document.getElementById("contador").style.display = "none";
 
 };
@@ -49,7 +48,7 @@ function Ruta_dia(dia) { //Función que devuelve la ruta del día.
       break;
     case 6:
       document.getElementById("Sabado").style.display = "block";
-      contador.innerHTML = sessionStorage.C_Sabado;
+      document.getElementById("contador").style.display = "none";
       break;
   };
 
@@ -77,7 +76,7 @@ function RutaABC(dia) { //Función que devuelve la ruta del día ordenada alfab�
       document.getElementById("ABViernes").style.display = "block";
       break;
     case 6:
-      document.getElementById("ABSabado").style.display = "block";
+      document.getElementById("Sabado").style.display = "block";
       break;
   };
 
@@ -98,7 +97,6 @@ function ruta_hoy(Primero) { /* Primero indica si es la primera vez que
   var miercoles = document.getElementById("Miercoles").childElementCount;
   var jueves = document.getElementById("Jueves").childElementCount;
   var viernes = document.getElementById("Viernes").childElementCount;
-  var sabado = document.getElementById("Sabado").childElementCount;
 
   lista = document.getElementById("dias")
   lista.selectedIndex = dia;
@@ -110,7 +108,6 @@ function ruta_hoy(Primero) { /* Primero indica si es la primera vez que
     sessionStorage.setItem("C_Miercoles", miercoles);
     sessionStorage.setItem("C_Jueves", jueves);
     sessionStorage.setItem("C_Viernes", viernes);
-    sessionStorage.setItem("C_Sabado", sabado);
 
     switch (dia) {
       case 1:
@@ -127,9 +124,6 @@ function ruta_hoy(Primero) { /* Primero indica si es la primera vez que
         break;
       case 5:
         sessionStorage.setItem("C_Hoy", viernes);
-        break;
-      case 6:
-        sessionStorage.setItem("C_Hoy", sabado);
         break;
     }
     document.getElementById("cli_quedan").innerHTML = sessionStorage.C_Hoy + "/";
