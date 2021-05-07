@@ -136,6 +136,7 @@ input[type=button] {
   border: 1px solid;
   border-radius: 0 0 1em 1em;
   font-size: 0.8em;
+  box-shadow: 2px 2px 5px grey;
 }
 
 .ubicacion {
@@ -149,6 +150,7 @@ input[type=button] {
   height: 1.2cm;
   width: 1.2cm;
   margin: 3px;
+ box-shadow: 2px 2px 5px grey;
 }
 
 .ubicacion  img {
