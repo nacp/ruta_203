@@ -139,6 +139,22 @@ input[type=button] {
   box-shadow: 2px 2px 5px grey;
 }
 
+.cliente-datos .otroDia {
+  display: inline-block;
+  background-color: darkred;
+  color: white;
+  border-radius: 5px;
+  padding: 3px 5px;
+}
+
+.cliente-datos .quincenal {
+  display: inline-block;
+  background-color: darkgreen;
+  color: white;
+  border-radius: 5px;
+  padding: 3px 5px;
+}
+
 .ubicacion {
   display: flex;
   align-items: center;
